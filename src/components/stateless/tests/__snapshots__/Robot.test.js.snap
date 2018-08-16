@@ -36,6 +36,7 @@ ShallowWrapper {
         <td
           className="firstName"
           contentEditable={true}
+          onBlur={[Function]}
           onKeyPress={[Function]}
 >
           Twikki
@@ -43,6 +44,7 @@ ShallowWrapper {
         <td
           className="lastName"
           contentEditable={true}
+          onBlur={[Function]}
           onKeyPress={[Function]}
 >
           Rogers
@@ -58,6 +60,13 @@ ShallowWrapper {
 </td>,
         <td>
           90
+</td>,
+        <td>
+          <button
+                    onClick={[Function]}
+          >
+                    delete
+          </button>
 </td>,
       ],
     },
@@ -82,6 +91,7 @@ ShallowWrapper {
           "children": "Twikki",
           "className": "firstName",
           "contentEditable": true,
+          "onBlur": [Function],
           "onKeyPress": [Function],
         },
         "ref": null,
@@ -96,6 +106,7 @@ ShallowWrapper {
           "children": "Rogers",
           "className": "lastName",
           "contentEditable": true,
+          "onBlur": [Function],
           "onKeyPress": [Function],
         },
         "ref": null,
@@ -146,6 +157,32 @@ ShallowWrapper {
         "rendered": 90,
         "type": "td",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            onClick={[Function]}
+>
+            delete
+</button>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "delete",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "delete",
+          "type": "button",
+        },
+        "type": "td",
+      },
     ],
     "type": "tr",
   },
@@ -162,6 +199,7 @@ ShallowWrapper {
           <td
             className="firstName"
             contentEditable={true}
+            onBlur={[Function]}
             onKeyPress={[Function]}
 >
             Twikki
@@ -169,6 +207,7 @@ ShallowWrapper {
           <td
             className="lastName"
             contentEditable={true}
+            onBlur={[Function]}
             onKeyPress={[Function]}
 >
             Rogers
@@ -184,6 +223,13 @@ ShallowWrapper {
 </td>,
           <td>
             90
+</td>,
+          <td>
+            <button
+                        onClick={[Function]}
+            >
+                        delete
+            </button>
 </td>,
         ],
       },
@@ -208,6 +254,7 @@ ShallowWrapper {
             "children": "Twikki",
             "className": "firstName",
             "contentEditable": true,
+            "onBlur": [Function],
             "onKeyPress": [Function],
           },
           "ref": null,
@@ -222,6 +269,7 @@ ShallowWrapper {
             "children": "Rogers",
             "className": "lastName",
             "contentEditable": true,
+            "onBlur": [Function],
             "onKeyPress": [Function],
           },
           "ref": null,
@@ -270,6 +318,32 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": 90,
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              onClick={[Function]}
+>
+              delete
+</button>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "delete",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "delete",
+            "type": "button",
+          },
           "type": "td",
         },
       ],

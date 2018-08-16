@@ -49,6 +49,7 @@ ShallowWrapper {
           Droids
 </h1>,
         <TableByCategory
+          deleteRobot={undefined}
           header="Starters"
           robots={
                     Array [
@@ -66,6 +67,7 @@ ShallowWrapper {
           updateName={undefined}
 />,
         <TableByCategory
+          deleteRobot={undefined}
           header="Subs"
           robots={
                     Array [
@@ -103,6 +105,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "deleteRobot": undefined,
           "header": "Starters",
           "robots": Array [
             Object {
@@ -126,6 +129,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "deleteRobot": undefined,
           "header": "Subs",
           "robots": Array [
             Object {
@@ -158,6 +162,7 @@ ShallowWrapper {
             Droids
 </h1>,
           <TableByCategory
+            deleteRobot={undefined}
             header="Starters"
             robots={
                         Array [
@@ -175,6 +180,7 @@ ShallowWrapper {
             updateName={undefined}
 />,
           <TableByCategory
+            deleteRobot={undefined}
             header="Subs"
             robots={
                         Array [
@@ -212,6 +218,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "deleteRobot": undefined,
             "header": "Starters",
             "robots": Array [
               Object {
@@ -235,6 +242,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "deleteRobot": undefined,
             "header": "Subs",
             "robots": Array [
               Object {

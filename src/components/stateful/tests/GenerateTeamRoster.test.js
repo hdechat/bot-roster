@@ -102,7 +102,7 @@ describe('GenerateTeamRoster', () => {
       expect(wrapper.instance().count).toEqual(0);
     });
 
-    it('changes state.error and renders error message if user submits roster without a name', () => {
+    it('changes state.error if user submits roster without a name', () => {
       let starters = [];
       let subs = [];
 
@@ -125,11 +125,9 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().submitTeamRoster(mockEvent);
 
       expect(wrapper.state('error')).toEqual(errors.missingName);
-      expect(wrapper.find('.error-message').text()).toEqual(errors.missingName);
-
     });
 
-    it('changes state.error and renders error message if user submits roster that does not have 10 starters', () => {
+    it('changes state.error if user submits roster that does not have 10 starters', () => {
       let starters = [];
       let subs = [];
 
@@ -152,10 +150,9 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().submitTeamRoster(mockEvent);
 
       expect(wrapper.state('error')).toEqual(errors.badNumberOfStarters);
-      expect(wrapper.find('.error-message').text()).toEqual(errors.badNumberOfStarters)
     });
 
-    it('changes state.error and renders error message if user submits roster that does not have 5 subs', () => {
+    it('changes state.error if user submits roster that does not have 5 subs', () => {
       let starters = [];
       let subs = [];
 
@@ -178,7 +175,6 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().submitTeamRoster(mockEvent);
 
       expect(wrapper.state('error')).toEqual(errors.badNumberOfSubs);
-      expect(wrapper.find('.error-message').text()).toEqual(errors.badNumberOfSubs)
     });
   });
 
@@ -424,14 +420,13 @@ describe('GenerateTeamRoster', () => {
         expect(wrapper.count).toEqual(1)
     });
 
-    it('changes state.error and renders error message if totalAttrScore is greater than 100', () => {
+    it('changes state.error if totalAttrScore is greater than 100', () => {
       wrapper.instance().addRobotToTeam(mockRobotTooStrong);
 
       expect (wrapper.state()).toEqual({...mockState, error: errors.badScore})
-      expect(wrapper.find('.error-message').text()).toEqual(errors.badScore)
     });
 
-    it('changes state.error and renders error message if totalAttrScore is a duplicate', () => {
+    it('changes state.error if totalAttrScore is a duplicate', () => {
       const mockUpdatedState = {
         teamName: '',
         starters: [{...mockRobotStarter, id: 'RoRo02', totalAttrScore: 100}],
@@ -453,10 +448,9 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
       expect(wrapper.state()).toEqual({...mockUpdatedState, error: errors.duplicateScore});
-      expect(wrapper.find('.error-message').text()).toEqual(errors.duplicateScore);
     });
 
-    it('changes state.error and renders error message if firstName is a duplicate in the team', () => {
+    it('changes state.error if firstName is a duplicate in the team', () => {
       const mockUpdatedState = {
         teamName: '',
         starters: [{...mockRobotStarter, id: 'RoRo02', totalAttrScore: 100}],
@@ -478,10 +472,9 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
       expect(wrapper.state()).toEqual({...mockUpdatedState, error: errors.duplicateFirstName});
-      expect(wrapper.find('.error-message').text()).toEqual(errors.duplicateFirstName);
     });
 
-    it('changes state.error and renders error message if lastName is a duplicate in the team', () => {
+    it('changes state.error if lastName is a duplicate in the team', () => {
       const mockUpdatedState = {
         teamName: '',
         starters: [{...mockRobotStarter, id: 'RoRo02', totalAttrScore: 100}],
@@ -503,7 +496,6 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
       expect(wrapper.state()).toEqual({...mockUpdatedState, error: errors.duplicateLastName});
-      expect(wrapper.find('.error-message').text()).toEqual(errors.duplicateLastName);
     });
   });
 
@@ -816,7 +808,7 @@ describe('GenerateTeamRoster', () => {
     expect(wrapper.find('div.GenerateTeamRoster').length).toEqual(1);
     expect(wrapper.find('input').length).toEqual(1);
     expect(wrapper.find('button').length).toEqual(1);
-    expect(wrapper.find('p.error-message').length).toEqual(1);
+    expect(wrapper.find('p.generate__error-message').length).toEqual(1);
     expect(wrapper.find('AddRobot').length).toEqual(1);
     expect(wrapper.find('Roster').length).toEqual(1);
   });
@@ -836,7 +828,7 @@ describe('GenerateTeamRoster', () => {
     const spy = spyOn(wrapper.instance(), 'submitTeamRoster');
 
     wrapper.instance().forceUpdate();
-    wrapper.find('button.submit-roster').simulate('click');
+    wrapper.find('.generate__submit-roster').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   });

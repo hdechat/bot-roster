@@ -79,6 +79,7 @@ ShallowWrapper {
 </thead>,
         <tbody>
           <Robot
+                    deleteRobot={undefined}
                     robot={
                               Object {
                                         "agility": 40,
@@ -93,6 +94,7 @@ ShallowWrapper {
                     updateName={undefined}
           />
           <Robot
+                    deleteRobot={undefined}
                     robot={
                               Object {
                                         "agility": 9,
@@ -306,6 +308,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Robot
+              deleteRobot={undefined}
               robot={
                             Object {
                                           "agility": 40,
@@ -320,6 +323,7 @@ ShallowWrapper {
               updateName={undefined}
 />,
             <Robot
+              deleteRobot={undefined}
               robot={
                             Object {
                                           "agility": 9,
@@ -342,6 +346,7 @@ ShallowWrapper {
             "key": "TwikkiRogers90",
             "nodeType": "function",
             "props": Object {
+              "deleteRobot": undefined,
               "robot": Object {
                 "agility": 40,
                 "firstName": "Twikki",
@@ -362,6 +367,7 @@ ShallowWrapper {
             "key": "R2D222",
             "nodeType": "function",
             "props": Object {
+              "deleteRobot": undefined,
               "robot": Object {
                 "agility": 9,
                 "firstName": "R2",
@@ -428,6 +434,7 @@ ShallowWrapper {
 </thead>,
           <tbody>
             <Robot
+                        deleteRobot={undefined}
                         robot={
                                     Object {
                                                 "agility": 40,
@@ -442,6 +449,7 @@ ShallowWrapper {
                         updateName={undefined}
             />
             <Robot
+                        deleteRobot={undefined}
                         robot={
                                     Object {
                                                 "agility": 9,
@@ -655,6 +663,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Robot
+                deleteRobot={undefined}
                 robot={
                                 Object {
                                                 "agility": 40,
@@ -669,6 +678,7 @@ ShallowWrapper {
                 updateName={undefined}
 />,
               <Robot
+                deleteRobot={undefined}
                 robot={
                                 Object {
                                                 "agility": 9,
@@ -691,6 +701,7 @@ ShallowWrapper {
               "key": "TwikkiRogers90",
               "nodeType": "function",
               "props": Object {
+                "deleteRobot": undefined,
                 "robot": Object {
                   "agility": 40,
                   "firstName": "Twikki",
@@ -711,6 +722,7 @@ ShallowWrapper {
               "key": "R2D222",
               "nodeType": "function",
               "props": Object {
+                "deleteRobot": undefined,
                 "robot": Object {
                   "agility": 9,
                   "firstName": "R2",
