@@ -1,11 +1,12 @@
 html {
   background: #000;
+  padding: 20px;
 }
 
 body {
   background: #fff;
   margin: auto;
-  padding: 0;
+  padding-bottom: 40px;
   font-family: sans-serif;
   width: 80%;
   height: fit-content;

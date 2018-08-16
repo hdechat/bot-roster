@@ -147,7 +147,7 @@ class GenerateTeamRoster extends Component {
         onChange={(event) => this.setState({ teamName: event.target.value })}
         placeholder="Team Name" />
         <button className="generate__submit-roster" onClick={this.submitTeamRoster}>Submit Team Roster</button>
-        <p className="generate__error-message">{this.state.error}</p>
+        {!!this.state.error && <p className="generate__error-message">{this.state.error}</p>}
         <div className="generate__container">
           <AddRobot addRobotToTeam={this.addRobotToTeam}/>
           <Roster deleteRobot={this.deleteRobot} updateName={this.updateName} team={this.state}/>

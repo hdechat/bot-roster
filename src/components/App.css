@@ -32,6 +32,7 @@
 }
 
 .generate__container {
+  display: flex;
   border: solid;
   margin: auto;
   padding: 10px;
@@ -40,6 +41,12 @@
 
 .generate__error-message {
   color: red;
+  border: solid red;
+  background: #fdf;
+  line-height: 30px;
+  position: fixed;
+  top: 75px;
+  left: 15%;
 }
 
 .robot-data {
