@@ -41,14 +41,14 @@ describe('TableByCategory', () => {
 
   it('renders all the expected elements', () => {
     expect(wrapper.find('table').length).toEqual(1);
-    expect(wrapper.find('thead').length).toEqual(1);
-    expect(wrapper.find('tr').length).toEqual(1);
-    expect(wrapper.find('th').length).toEqual(1);
+    expect(wrapper.find('thead').length).toEqual(2);
+    expect(wrapper.find('tr').length).toEqual(2);
+    expect(wrapper.find('th').length).toEqual(8);
     expect(wrapper.find('tbody').length).toEqual(1);
   });
 
   it('renders the header prop value within the th element', () => {
-    expect(wrapper.find('th').text()).toBe(mockHeader)
+    expect(wrapper.find('.header__category').text()).toBe(mockHeader)
   });
 
   it('renders the robot objects', () => {

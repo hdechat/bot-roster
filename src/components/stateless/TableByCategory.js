@@ -25,7 +25,7 @@ function TableByCategory({ header, robots, updateName, deleteRobot }) {
       </thead>
       <thead>
         <tr>
-          <th colSpan="7">{ header }</th>
+          <th className="header__category" colSpan="7">{ header }</th>
         </tr>
       </thead>
       <tbody>

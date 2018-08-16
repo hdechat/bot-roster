@@ -33,6 +33,6 @@ describe('Robot', () => {
   });
 
   it('renders 7 table data elements', () => {
-    expect(wrapper.find('td').length).toEqual(7);
+    expect(wrapper.find('td').length).toEqual(8);
   });
 });
