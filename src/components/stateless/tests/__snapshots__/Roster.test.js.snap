@@ -63,6 +63,7 @@ ShallowWrapper {
                               },
                             ]
           }
+          updateName={undefined}
 />,
         <TableByCategory
           header="Subs"
@@ -79,6 +80,7 @@ ShallowWrapper {
                               },
                             ]
           }
+          updateName={undefined}
 />,
       ],
       "className": "Roster",
@@ -113,6 +115,7 @@ ShallowWrapper {
               "totalAttrScore": 90,
             },
           ],
+          "updateName": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -135,6 +138,7 @@ ShallowWrapper {
               "totalAttrScore": 95,
             },
           ],
+          "updateName": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -168,6 +172,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            updateName={undefined}
 />,
           <TableByCategory
             header="Subs"
@@ -184,6 +189,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            updateName={undefined}
 />,
         ],
         "className": "Roster",
@@ -218,6 +224,7 @@ ShallowWrapper {
                 "totalAttrScore": 90,
               },
             ],
+            "updateName": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -240,6 +247,7 @@ ShallowWrapper {
                 "totalAttrScore": 95,
               },
             ],
+            "updateName": undefined,
           },
           "ref": null,
           "rendered": null,

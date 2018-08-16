@@ -42,8 +42,37 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <thead>
-          <tr>
+          <tr
+                    className="header__titles"
+          >
                     <th>
+                              ID
+                    </th>
+                    <th>
+                              FIRST NAME
+                    </th>
+                    <th>
+                              LAST NAME
+                    </th>
+                    <th>
+                              SPEED
+                    </th>
+                    <th>
+                              STRENGTH
+                    </th>
+                    <th>
+                              AGILITY
+                    </th>
+                    <th>
+                              TTL ATTRIBUTES SCORE
+                    </th>
+          </tr>
+</thead>,
+        <thead>
+          <tr>
+                    <th
+                              colSpan="7"
+                    >
                               Starters
                     </th>
           </tr>
@@ -61,6 +90,7 @@ ShallowWrapper {
                                         "totalAttrScore": 90,
                                       }
                     }
+                    updateName={undefined}
           />
           <Robot
                     robot={
@@ -74,10 +104,10 @@ ShallowWrapper {
                                         "totalAttrScore": 22,
                                       }
                     }
+                    updateName={undefined}
           />
 </tbody>,
       ],
-      "className": "TableByCategory",
     },
     "ref": null,
     "rendered": Array [
@@ -86,8 +116,156 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <tr>
+          "children": <tr
+            className="header__titles"
+>
             <th>
+                        ID
+            </th>
+            <th>
+                        FIRST NAME
+            </th>
+            <th>
+                        LAST NAME
+            </th>
+            <th>
+                        SPEED
+            </th>
+            <th>
+                        STRENGTH
+            </th>
+            <th>
+                        AGILITY
+            </th>
+            <th>
+                        TTL ATTRIBUTES SCORE
+            </th>
+</tr>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <th>
+                ID
+</th>,
+              <th>
+                FIRST NAME
+</th>,
+              <th>
+                LAST NAME
+</th>,
+              <th>
+                SPEED
+</th>,
+              <th>
+                STRENGTH
+</th>,
+              <th>
+                AGILITY
+</th>,
+              <th>
+                TTL ATTRIBUTES SCORE
+</th>,
+            ],
+            "className": "header__titles",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "ID",
+              },
+              "ref": null,
+              "rendered": "ID",
+              "type": "th",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "FIRST NAME",
+              },
+              "ref": null,
+              "rendered": "FIRST NAME",
+              "type": "th",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "LAST NAME",
+              },
+              "ref": null,
+              "rendered": "LAST NAME",
+              "type": "th",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "SPEED",
+              },
+              "ref": null,
+              "rendered": "SPEED",
+              "type": "th",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "STRENGTH",
+              },
+              "ref": null,
+              "rendered": "STRENGTH",
+              "type": "th",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "AGILITY",
+              },
+              "ref": null,
+              "rendered": "AGILITY",
+              "type": "th",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "TTL ATTRIBUTES SCORE",
+              },
+              "ref": null,
+              "rendered": "TTL ATTRIBUTES SCORE",
+              "type": "th",
+            },
+          ],
+          "type": "tr",
+        },
+        "type": "thead",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <tr>
+            <th
+                        colSpan="7"
+            >
                         Starters
             </th>
 </tr>,
@@ -98,7 +276,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <th>
+            "children": <th
+              colSpan="7"
+>
               Starters
 </th>,
           },
@@ -109,6 +289,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Starters",
+              "colSpan": "7",
             },
             "ref": null,
             "rendered": "Starters",
@@ -136,6 +317,7 @@ ShallowWrapper {
                                           "totalAttrScore": 90,
                                         }
               }
+              updateName={undefined}
 />,
             <Robot
               robot={
@@ -149,6 +331,7 @@ ShallowWrapper {
                                           "totalAttrScore": 22,
                                         }
               }
+              updateName={undefined}
 />,
           ],
         },
@@ -168,6 +351,7 @@ ShallowWrapper {
                 "strength": 30,
                 "totalAttrScore": 90,
               },
+              "updateName": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -187,6 +371,7 @@ ShallowWrapper {
                 "strength": 8,
                 "totalAttrScore": 22,
               },
+              "updateName": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -206,8 +391,37 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <thead>
-            <tr>
+            <tr
+                        className="header__titles"
+            >
                         <th>
+                                    ID
+                        </th>
+                        <th>
+                                    FIRST NAME
+                        </th>
+                        <th>
+                                    LAST NAME
+                        </th>
+                        <th>
+                                    SPEED
+                        </th>
+                        <th>
+                                    STRENGTH
+                        </th>
+                        <th>
+                                    AGILITY
+                        </th>
+                        <th>
+                                    TTL ATTRIBUTES SCORE
+                        </th>
+            </tr>
+</thead>,
+          <thead>
+            <tr>
+                        <th
+                                    colSpan="7"
+                        >
                                     Starters
                         </th>
             </tr>
@@ -225,6 +439,7 @@ ShallowWrapper {
                                                 "totalAttrScore": 90,
                                               }
                         }
+                        updateName={undefined}
             />
             <Robot
                         robot={
@@ -238,10 +453,10 @@ ShallowWrapper {
                                                 "totalAttrScore": 22,
                                               }
                         }
+                        updateName={undefined}
             />
 </tbody>,
         ],
-        "className": "TableByCategory",
       },
       "ref": null,
       "rendered": Array [
@@ -250,8 +465,156 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <tr>
+            "children": <tr
+              className="header__titles"
+>
               <th>
+                            ID
+              </th>
+              <th>
+                            FIRST NAME
+              </th>
+              <th>
+                            LAST NAME
+              </th>
+              <th>
+                            SPEED
+              </th>
+              <th>
+                            STRENGTH
+              </th>
+              <th>
+                            AGILITY
+              </th>
+              <th>
+                            TTL ATTRIBUTES SCORE
+              </th>
+</tr>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <th>
+                  ID
+</th>,
+                <th>
+                  FIRST NAME
+</th>,
+                <th>
+                  LAST NAME
+</th>,
+                <th>
+                  SPEED
+</th>,
+                <th>
+                  STRENGTH
+</th>,
+                <th>
+                  AGILITY
+</th>,
+                <th>
+                  TTL ATTRIBUTES SCORE
+</th>,
+              ],
+              "className": "header__titles",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "ID",
+                },
+                "ref": null,
+                "rendered": "ID",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "FIRST NAME",
+                },
+                "ref": null,
+                "rendered": "FIRST NAME",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "LAST NAME",
+                },
+                "ref": null,
+                "rendered": "LAST NAME",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "SPEED",
+                },
+                "ref": null,
+                "rendered": "SPEED",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "STRENGTH",
+                },
+                "ref": null,
+                "rendered": "STRENGTH",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "AGILITY",
+                },
+                "ref": null,
+                "rendered": "AGILITY",
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "TTL ATTRIBUTES SCORE",
+                },
+                "ref": null,
+                "rendered": "TTL ATTRIBUTES SCORE",
+                "type": "th",
+              },
+            ],
+            "type": "tr",
+          },
+          "type": "thead",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <tr>
+              <th
+                            colSpan="7"
+              >
                             Starters
               </th>
 </tr>,
@@ -262,7 +625,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <th>
+              "children": <th
+                colSpan="7"
+>
                 Starters
 </th>,
             },
@@ -273,6 +638,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Starters",
+                "colSpan": "7",
               },
               "ref": null,
               "rendered": "Starters",
@@ -300,6 +666,7 @@ ShallowWrapper {
                                                 "totalAttrScore": 90,
                                               }
                 }
+                updateName={undefined}
 />,
               <Robot
                 robot={
@@ -313,6 +680,7 @@ ShallowWrapper {
                                                 "totalAttrScore": 22,
                                               }
                 }
+                updateName={undefined}
 />,
             ],
           },
@@ -332,6 +700,7 @@ ShallowWrapper {
                   "strength": 30,
                   "totalAttrScore": 90,
                 },
+                "updateName": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -351,6 +720,7 @@ ShallowWrapper {
                   "strength": 8,
                   "totalAttrScore": 22,
                 },
+                "updateName": undefined,
               },
               "ref": null,
               "rendered": null,

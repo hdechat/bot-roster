@@ -20,33 +20,39 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          id="team-name"
           onChange={[Function]}
           placeholder="Team Name"
           required={true}
           value=""
 />,
         <button
-          className="submit-roster"
+          className="generate__submit-roster"
           onClick={[Function]}
 >
           Submit Team Roster
 </button>,
         <p
-          className="error-message"
+          className="generate__error-message"
 />,
-        <AddRobot
-          addRobotToTeam={[Function]}
-/>,
-        <Roster
-          team={
-                    Object {
-                              "error": "",
-                              "starters": Array [],
-                              "subs": Array [],
-                              "teamName": "",
-                            }
-          }
-/>,
+        <div
+          className="generate__container"
+>
+          <AddRobot
+                    addRobotToTeam={[Function]}
+          />
+          <Roster
+                    team={
+                              Object {
+                                        "error": "",
+                                        "starters": Array [],
+                                        "subs": Array [],
+                                        "teamName": "",
+                                      }
+                    }
+                    updateName={[Function]}
+          />
+</div>,
       ],
       "className": "GenerateTeamRoster",
     },
@@ -57,6 +63,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "id": "team-name",
           "onChange": [Function],
           "placeholder": "Team Name",
           "required": true,
@@ -72,7 +79,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Submit Team Roster",
-          "className": "submit-roster",
+          "className": "generate__submit-roster",
           "onClick": [Function],
         },
         "ref": null,
@@ -85,7 +92,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "",
-          "className": "error-message",
+          "className": "generate__error-message",
         },
         "ref": null,
         "rendered": "",
@@ -94,29 +101,58 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "addRobotToTeam": [Function],
+          "children": Array [
+            <AddRobot
+              addRobotToTeam={[Function]}
+/>,
+            <Roster
+              team={
+                            Object {
+                                          "error": "",
+                                          "starters": Array [],
+                                          "subs": Array [],
+                                          "teamName": "",
+                                        }
+              }
+              updateName={[Function]}
+/>,
+          ],
+          "className": "generate__container",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "team": Object {
-            "error": "",
-            "starters": Array [],
-            "subs": Array [],
-            "teamName": "",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "addRobotToTeam": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "team": Object {
+                "error": "",
+                "starters": Array [],
+                "subs": Array [],
+                "teamName": "",
+              },
+              "updateName": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -129,33 +165,39 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            id="team-name"
             onChange={[Function]}
             placeholder="Team Name"
             required={true}
             value=""
 />,
           <button
-            className="submit-roster"
+            className="generate__submit-roster"
             onClick={[Function]}
 >
             Submit Team Roster
 </button>,
           <p
-            className="error-message"
+            className="generate__error-message"
 />,
-          <AddRobot
-            addRobotToTeam={[Function]}
-/>,
-          <Roster
-            team={
-                        Object {
-                                    "error": "",
-                                    "starters": Array [],
-                                    "subs": Array [],
-                                    "teamName": "",
-                                  }
-            }
-/>,
+          <div
+            className="generate__container"
+>
+            <AddRobot
+                        addRobotToTeam={[Function]}
+            />
+            <Roster
+                        team={
+                                    Object {
+                                                "error": "",
+                                                "starters": Array [],
+                                                "subs": Array [],
+                                                "teamName": "",
+                                              }
+                        }
+                        updateName={[Function]}
+            />
+</div>,
         ],
         "className": "GenerateTeamRoster",
       },
@@ -166,6 +208,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "id": "team-name",
             "onChange": [Function],
             "placeholder": "Team Name",
             "required": true,
@@ -181,7 +224,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Submit Team Roster",
-            "className": "submit-roster",
+            "className": "generate__submit-roster",
             "onClick": [Function],
           },
           "ref": null,
@@ -194,7 +237,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "",
-            "className": "error-message",
+            "className": "generate__error-message",
           },
           "ref": null,
           "rendered": "",
@@ -203,29 +246,58 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "addRobotToTeam": [Function],
+            "children": Array [
+              <AddRobot
+                addRobotToTeam={[Function]}
+/>,
+              <Roster
+                team={
+                                Object {
+                                                "error": "",
+                                                "starters": Array [],
+                                                "subs": Array [],
+                                                "teamName": "",
+                                              }
+                }
+                updateName={[Function]}
+/>,
+            ],
+            "className": "generate__container",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "team": Object {
-              "error": "",
-              "starters": Array [],
-              "subs": Array [],
-              "teamName": "",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "addRobotToTeam": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "team": Object {
+                  "error": "",
+                  "starters": Array [],
+                  "subs": Array [],
+                  "teamName": "",
+                },
+                "updateName": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

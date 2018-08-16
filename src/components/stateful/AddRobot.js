@@ -21,7 +21,9 @@ class AddRobot extends Component {
   };
 
   updateUserInputNumber = (event) => {
-    this.setState({ [event.target.name]: parseInt(event.target.value) })
+    if(event.target.value) {
+      this.setState({ [event.target.name]: parseInt(event.target.value) })
+    }
   };
 
   addToTeam = (event) => {
@@ -36,45 +38,63 @@ class AddRobot extends Component {
 
   render() {
     return (
-      <form onSubmit={this.addToTeam}>
-        <select required name="category" onChange={this.updateUserInputText}>
+      <form className="AddRobot" onSubmit={this.addToTeam}>
+        <label htmlFor="category">Starter or Sub</label>
+        <select 
+          value={this.state.category}
+          required
+          id="category"
+          name="category" 
+          onChange={this.updateUserInputText}>
           <option value="">Select a Category</option>
           <option value="starters">starters</option>
           <option value="subs">subs</option>
         </select>
-        <input
-          required
-          value={this.state.firstName}
-          name="firstName"
-          onChange={this.updateUserInputText} 
-          placeholder="first name"
-          minLength="2" />
-        <input
-          required
-          value={this.state.lastName} 
-          name="lastName" 
-          onChange={this.updateUserInputText} 
-          placeholder="last name" 
-          minLength="2"/>
-        <input 
-          type="number"
-          value={this.state.speed} 
-          name="speed"
-          onChange={this.updateUserInputNumber} 
-          placeholder="speed" />
-        <input 
-          type="number"
-          value={this.state.strength} 
-          name="strength" 
-          onChange={this.updateUserInputNumber} 
-          placeholder="strength" />
-        <input 
-          type="number"
-          value={this.state.agility} 
-          name="agility" 
-          onChange={this.updateUserInputNumber} 
-          placeholder="agility" />
+        <div className="robot-data">
+          <label htmlFor="first-name">First Name</label>
+          <input
+            id="first-name"
+            required
+            value={this.state.firstName}
+            name="firstName"
+            onChange={this.updateUserInputText} 
+            placeholder="first name"
+            minLength="2" />
+          <label htmlFor="last-name">Last Name</label>
+          <input
+            id="last-name"
+            required
+            value={this.state.lastName} 
+            name="lastName" 
+            onChange={this.updateUserInputText} 
+            placeholder="last name" 
+            minLength="2"/>
+          <label htmlFor="speed">Speed</label>
+          <input 
+            id="speed"
+            type="number"
+            pattern="[0-9]"
+            value={this.state.speed} 
+            name="speed"
+            onChange={this.updateUserInputNumber} />
+          <label htmlFor="strength">Strength</label>
+          <input 
+            id="strength"
+            type="number"
+            pattern="[0-9]"
+            value={this.state.strength} 
+            name="strength" 
+            onChange={this.updateUserInputNumber} />
+          <label htmlFor="agility">Agility</label>
+          <input 
+            id="agility"
+            type="number"
+            pattern="[0-9]"
+            value={this.state.agility} 
+            name="agility" 
+            onChange={this.updateUserInputNumber} />
         <button type="submit">Add Robot To Team</button>
+        </div>
       </form>
     );
   };

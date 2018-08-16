@@ -67,10 +67,11 @@ class GenerateTeamRoster extends Component {
   };
 
   validateNewRobot(robot, score) {
-    const { firstName, lastName } = robot;
+    const { firstName, lastName, category } = robot;
     let robotHasDupeStrength = this.checkForDuplicate('totalAttrScore', score);
     let robotHasDupeFirstName = this.checkForDuplicate('firstName', firstName);
     let robotHasDupeLastName = this.checkForDuplicate('lastName', lastName);
+    let categoryFull = this.checkForCategoryFull(category);
 
     if (score > 100) {
       return errors.badScore;
@@ -80,10 +81,20 @@ class GenerateTeamRoster extends Component {
       return errors.duplicateFirstName;
     } else if (robotHasDupeLastName) {
       return errors.duplicateLastName;
+    } else if (categoryFull) {
+      return errors.maxPlayers;
     } else {
       return 'valid';
     }
   };
+
+  checkForCategoryFull(category) {
+    if (category === 'starters') {
+      return this.state.starters.length < 10 ? false : true;
+    } else {
+      return this.state.subs.length < 5 ? false : true;
+    }
+  }
 
   checkForDuplicate(prop, value) {
     const categories = ['starters', 'subs'];
@@ -110,18 +121,29 @@ class GenerateTeamRoster extends Component {
     return speed + strength + agility;
   }
 
+  updateName = (robot) => {
+    const updatedBots = this.state[robot.category].map(bot => {
+      return bot.id === robot.id ? robot : bot;
+    });
+
+    this.setState({ [robot.category]: updatedBots })
+  }
+
   render() {
     return (
       <div className="GenerateTeamRoster">
       <input
         required
+        id="team-name"
         value={this.state.teamName} 
         onChange={(event) => this.setState({ teamName: event.target.value })}
         placeholder="Team Name" />
-        <button className="submit-roster" onClick={this.submitTeamRoster}>Submit Team Roster</button>
-        <p className="error-message">{this.state.error}</p>
-        <AddRobot addRobotToTeam={this.addRobotToTeam}/>
-        <Roster team={this.state}/>
+        <button className="generate__submit-roster" onClick={this.submitTeamRoster}>Submit Team Roster</button>
+        <p className="generate__error-message">{this.state.error}</p>
+        <div className="generate__container">
+          <AddRobot addRobotToTeam={this.addRobotToTeam}/>
+          <Roster updateName={this.updateName} team={this.state}/>
+        </div>
       </div>
     );
   };

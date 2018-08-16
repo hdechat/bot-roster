@@ -3,10 +3,10 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #bcc6cc;
   height: 50px;
   padding: 20px;
-  color: white;
+  color: #c12090;
 }
 
 .App-title {
@@ -15,4 +15,65 @@
 
 .App-intro {
   font-size: large;
+}
+
+.GenerateTeamRoster {
+  margin-top: 20px;
+}
+
+.Roster {
+  margin: auto;
+  width: 65%;
+}
+
+.AddRobot {
+  margin: auto;
+  width: 30%;
+}
+
+.generate__container {
+  border: solid;
+  margin: auto;
+  padding: 10px;
+  width: 90%;
+}
+
+.generate__error-message {
+  color: red;
+}
+
+.robot-data {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  text-align: left;
+}
+
+.header__category {
+  width: 100%;
+}
+
+select {
+  border-radius: 0;
+  width: 80%;
+}
+
+button {
+  background: grey;
+  color: #fff;
+}
+
+table {
+  border: solid;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+}
+
+tbody {
+  height: 20px;
+}
+
+th, td {
+  border: solid thin;
 }

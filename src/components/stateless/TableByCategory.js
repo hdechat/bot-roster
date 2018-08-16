@@ -1,18 +1,30 @@
 import React from 'react';
 import Robot from './Robot';
 
-function TableByCategory({ header, robots }) {
+function TableByCategory({ header, robots, updateName }) {
   const team = robots.map(bot => 
     <Robot 
       key={bot.firstName + bot.lastName + bot.totalAttrScore}
-      robot={bot} />
+      robot={bot}
+      updateName={updateName} />
   );
 
   return(
-    <table className="TableByCategory">
+    <table>
+      <thead>
+        <tr className="header__titles">
+          <th>ID</th>
+          <th>FIRST NAME</th>
+          <th>LAST NAME</th>
+          <th>SPEED</th>
+          <th>STRENGTH</th>
+          <th>AGILITY</th>
+          <th>TTL ATTRIBUTES SCORE</th>
+        </tr>
+      </thead>
       <thead>
         <tr>
-          <th>{ header }</th>
+          <th colSpan="7">{ header }</th>
         </tr>
       </thead>
       <tbody>

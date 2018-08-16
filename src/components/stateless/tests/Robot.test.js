@@ -1,10 +1,11 @@
 import React from 'react';
 import Robot from '../Robot';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('Robot', () => {
   let wrapper;
   let mockRobot;
+  let mockUpdateName;
 
   beforeEach(() => {
     mockRobot = {
@@ -17,7 +18,9 @@ describe('Robot', () => {
       totalAttrScore: 90
     };
 
-    wrapper = shallow(<Robot robot={mockRobot} />);
+    mockUpdateName = jest.fn();
+
+    wrapper = shallow(<Robot robot={mockRobot} updateName={jest.fn}/>);
   });
 
   it('matches snapshot', () => {

@@ -15,6 +15,7 @@ ShallowWrapper {
             "totalAttrScore": 90,
           }
     }
+    updateName={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -32,10 +33,18 @@ ShallowWrapper {
         <td>
           ABC123
 </td>,
-        <td>
+        <td
+          className="firstName"
+          contentEditable={true}
+          onKeyPress={[Function]}
+>
           Twikki
 </td>,
-        <td>
+        <td
+          className="lastName"
+          contentEditable={true}
+          onKeyPress={[Function]}
+>
           Rogers
 </td>,
         <td>
@@ -71,6 +80,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Twikki",
+          "className": "firstName",
+          "contentEditable": true,
+          "onKeyPress": [Function],
         },
         "ref": null,
         "rendered": "Twikki",
@@ -82,6 +94,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Rogers",
+          "className": "lastName",
+          "contentEditable": true,
+          "onKeyPress": [Function],
         },
         "ref": null,
         "rendered": "Rogers",
@@ -144,10 +159,18 @@ ShallowWrapper {
           <td>
             ABC123
 </td>,
-          <td>
+          <td
+            className="firstName"
+            contentEditable={true}
+            onKeyPress={[Function]}
+>
             Twikki
 </td>,
-          <td>
+          <td
+            className="lastName"
+            contentEditable={true}
+            onKeyPress={[Function]}
+>
             Rogers
 </td>,
           <td>
@@ -183,6 +206,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Twikki",
+            "className": "firstName",
+            "contentEditable": true,
+            "onKeyPress": [Function],
           },
           "ref": null,
           "rendered": "Twikki",
@@ -194,6 +220,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Rogers",
+            "className": "lastName",
+            "contentEditable": true,
+            "onKeyPress": [Function],
           },
           "ref": null,
           "rendered": "Rogers",

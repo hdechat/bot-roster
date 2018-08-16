@@ -129,7 +129,7 @@ describe('GenerateTeamRoster', () => {
 
     });
 
-    it('changes state.error and renders error message if user submits roster does not have 10 starters', () => {
+    it('changes state.error and renders error message if user submits roster that does not have 10 starters', () => {
       let starters = [];
       let subs = [];
 
@@ -155,7 +155,7 @@ describe('GenerateTeamRoster', () => {
       expect(wrapper.find('.error-message').text()).toEqual(errors.badNumberOfStarters)
     });
 
-    it('changes state.error and renders error message if user submits roster does not have 5 subs', () => {
+    it('changes state.error and renders error message if user submits roster that does not have 5 subs', () => {
       let starters = [];
       let subs = [];
 
@@ -430,6 +430,7 @@ describe('GenerateTeamRoster', () => {
     let mockRobotSub;
     let mockRobotStarter;
     let mockUpdatedState;
+    let mockState;
 
     beforeEach(() => {
       mockRobotSub = {
@@ -465,6 +466,40 @@ describe('GenerateTeamRoster', () => {
         strength: 50,
         agility: 30  
       }
+
+      let starters = [];
+      let subs = [];
+
+      for (let i = 0; i < 10; i++) {
+        starters.push({
+          id: `ABC12${i}`,
+          firstName: `${i}Twikki`,
+          lastName: `${i}Rogers`,
+          speed: 2 + i,
+          strength: 3 + i,
+          agility: 4 + i,
+          totalAttrScore: 9 + i
+        });
+      }
+
+      for (let i = 0; i < 5; i++) {
+        subs.push({
+          id: `DEF12${i}`,
+          firstName: `${i}Kki`,
+          lastName: `${i}Gers`,
+          speed: 12 + i,
+          strength: 13 + i,
+          agility: 14 + i,
+          totalAttrScore: 19 + i
+        });
+      }
+
+      mockState = {
+        teamName: 'BuzzKillers',
+        starters,
+        subs,
+        error: ''
+      };
     });
 
     it('calls checkForDuplicate 3 times', () => {
@@ -511,10 +546,98 @@ describe('GenerateTeamRoster', () => {
       expect(actual).toEqual(expected);
     });
 
+    it('returns correct errors string if there are maximum number of starters', () => {
+      wrapper.setState(mockState);
+
+      const actual = wrapper.instance().validateNewRobot({...mockRobot, category: 'starters'}, 90);
+      const expected = errors.maxPlayers;
+
+      expect(actual).toEqual(expected);
+    });
+
+    it('returns correct errors string if there are maximum number of subs', () => {
+      wrapper.setState(mockState);
+
+      const actual = wrapper.instance().validateNewRobot(mockRobot, 90);
+      const expected = errors.maxPlayers;
+
+      expect(actual).toEqual(expected);
+    });
+
     it('returns valid if none of the checkForDuplicate returns return a result', () => {
       const actual = wrapper.instance().validateNewRobot(mockRobot, 80);
 
       expect(actual).toEqual('valid');
+    });
+  });
+
+  describe('CHECK_FOR_CATEGORY_FULL', () => {
+    beforeEach(() => {
+      let starters = [];
+      let subs = [];
+
+      for (let i = 0; i < 10; i++) {
+        starters.push({
+          id: `ABC12${i}`,
+          firstName: `${i}Twikki`,
+          lastName: `${i}Rogers`,
+          speed: 2 + i,
+          strength: 3 + i,
+          agility: 4 + i,
+          totalAttrScore: 9 + i
+        });
+      }
+
+      for (let i = 0; i < 5; i++) {
+        subs.push({
+          id: `DEF12${i}`,
+          firstName: `${i}Kki`,
+          lastName: `${i}Gers`,
+          speed: 12 + i,
+          strength: 13 + i,
+          agility: 14 + i,
+          totalAttrScore: 19 + i
+        });
+      }
+
+      mockState = {
+        teamName: 'BuzzKillers',
+        starters,
+        subs,
+        error: ''
+      };
+    });
+
+    it('should return true if there are 10 starters', () => {
+      wrapper.setState(mockState);
+
+      const actual = wrapper.instance().checkForCategoryFull('starters');
+
+      expect(actual).toEqual(true);
+    });
+
+    it('should return true if there are 5 subs', () => {
+      wrapper.setState(mockState);
+
+      const actual = wrapper.instance().checkForCategoryFull('subs');
+
+      expect(actual).toEqual(true);
+    });
+
+    it('should return false if there are less than 10 starters', () => {
+      wrapper.setState({...mockState, starters: []});
+
+      const actual = wrapper.instance().checkForCategoryFull('starters');
+
+      expect(actual).toEqual(false);
+    });
+
+    it('should return false if there are less than 5 subs', () => {
+      wrapper.setState({...mockState, subs: []});
+
+      const actual = wrapper.instance().checkForCategoryFull('subs')
+
+      expect(actual).toEqual(false)
     });
   });
 
@@ -574,6 +697,37 @@ describe('GenerateTeamRoster', () => {
 
       expect(actual).toEqual(6);
     }); 
+  });
+
+  describe('UPDATE_NAME_IN_GENERATE_ROSTER', () => {
+    let mockRobot = {
+      category: 'subs',
+      firstName: 'Twikki',
+      lastName: 'Bell',
+      speed: 10,
+      strength: 50,
+      agility: 30  
+    }
+
+    let mockState = {
+      teamName: 'Buzzers',
+      starters: [],
+      subs: [mockRobot],
+      error: ''
+    };
+
+    it('updates robot in state', () => {
+      wrapper.setState(mockState);
+      wrapper.instance().updateName({...mockRobot, firstName: 'Tinker'});
+
+      const expected = {
+        teamName: 'Buzzers',
+        starters: [],
+        subs: [{...mockRobot, firstName: 'Tinker'}],
+        error: ''
+      };
+      expect(wrapper.state()).toEqual(expected)
+    });
   });
 
   it('renders all the expected elements', () => {
