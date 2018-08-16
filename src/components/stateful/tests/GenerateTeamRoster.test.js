@@ -261,6 +261,88 @@ describe('GenerateTeamRoster', () => {
     });
   });
 
+  describe('DELETE_ROBOT', () => {
+    let mockState;
+    let mockRobotStarter;
+    let mockRobotSub;
+
+    beforeEach(() => {
+      let starters = [];
+      let subs = [];
+
+      for (let i = 0; i < 10; i++) {
+        starters.push({
+          id: `ABC12${i}`,
+          firstName: `${i}Twikki`,
+          lastName: `${i}Rogers`,
+          speed: 2 + i,
+          strength: 3 + i,
+          agility: 4 + i,
+          totalAttrScore: 9 + i
+        });
+      }
+
+      for (let i = 0; i < 5; i++) {
+        subs.push({
+          id: `DEF12${i}`,
+          firstName: `${i}Kki`,
+          lastName: `${i}Gers`,
+          speed: 12 + i,
+          strength: 13 + i,
+          agility: 14 + i,
+          totalAttrScore: 19 + i
+        });
+      }
+
+      mockState = {
+        teamName: 'BuzzKillers',
+        starters,
+        subs,
+        error: ''
+      };
+
+      mockRobotStarter = {
+        category: 'starters',
+        id: 'ABC121',
+        firstName: '1Twikki',
+        lastName: '1Rogers',
+        speed: 3,
+        strength: 4,
+        agility: 5,
+        totalAttrScore: 12
+      }
+
+      mockRobotSub = {
+        category: 'subs',
+        id: 'DEF121',
+        firstName: '1Kki',
+        lastName: '1Gers',
+        speed: 13,
+        strength: 14,
+        agility: 15,
+        totalAttrScore: 42
+      }
+    });
+
+    it('deletes robot from starters', () => {
+      wrapper.setState(mockState)
+      expect(wrapper.state('starters').length).toEqual(10);
+
+      wrapper.instance().deleteRobot(mockRobotStarter);
+
+      expect(wrapper.state('starters').length).toEqual(9);      
+    });
+
+    it('deletes robot from subs', () => {
+      wrapper.setState(mockState)
+      expect(wrapper.state('subs').length).toEqual(5);
+
+      wrapper.instance().deleteRobot(mockRobotSub);
+
+      expect(wrapper.state('subs').length).toEqual(4);     
+    }); 
+  });
+
   describe('ADD_ROBOT_TO_TEAM', () => {
     const mockRobotSub = {
       category: 'subs',

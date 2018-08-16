@@ -49,6 +49,14 @@ class GenerateTeamRoster extends Component {
     this.setState({ ...this.state, ...initialState });
   };
 
+  deleteRobot = (robot) => {
+    const { category, id } = robot;
+
+    const filtered = this.state[category].filter(bot => bot.id !== id);
+
+    this.setState({ [category]: filtered });
+  };
+
   addRobotToTeam = (robot) => {
     const { category, firstName, lastName, speed, strength, agility } = robot;
 
@@ -142,7 +150,7 @@ class GenerateTeamRoster extends Component {
         <p className="generate__error-message">{this.state.error}</p>
         <div className="generate__container">
           <AddRobot addRobotToTeam={this.addRobotToTeam}/>
-          <Roster updateName={this.updateName} team={this.state}/>
+          <Roster deleteRobot={this.deleteRobot} updateName={this.updateName} team={this.state}/>
         </div>
       </div>
     );
