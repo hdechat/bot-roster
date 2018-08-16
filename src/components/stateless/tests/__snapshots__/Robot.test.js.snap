@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Robot matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Robot
+    robot={
+        Object {
+            "agility": 40,
+            "firstName": "Twikki",
+            "id": "ABC123",
+            "lastName": "Rogers",
+            "speed": 20,
+            "strength": 30,
+            "totalAttrScore": 90,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <td>
+          ABC123
+</td>,
+        <td>
+          Twikki
+</td>,
+        <td>
+          Rogers
+</td>,
+        <td>
+          20
+</td>,
+        <td>
+          30
+</td>,
+        <td>
+          40
+</td>,
+        <td>
+          90
+</td>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "ABC123",
+        },
+        "ref": null,
+        "rendered": "ABC123",
+        "type": "td",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Twikki",
+        },
+        "ref": null,
+        "rendered": "Twikki",
+        "type": "td",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Rogers",
+        },
+        "ref": null,
+        "rendered": "Rogers",
+        "type": "td",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 20,
+        },
+        "ref": null,
+        "rendered": 20,
+        "type": "td",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 30,
+        },
+        "ref": null,
+        "rendered": 30,
+        "type": "td",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 40,
+        },
+        "ref": null,
+        "rendered": 40,
+        "type": "td",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 90,
+        },
+        "ref": null,
+        "rendered": 90,
+        "type": "td",
+      },
+    ],
+    "type": "tr",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <td>
+            ABC123
+</td>,
+          <td>
+            Twikki
+</td>,
+          <td>
+            Rogers
+</td>,
+          <td>
+            20
+</td>,
+          <td>
+            30
+</td>,
+          <td>
+            40
+</td>,
+          <td>
+            90
+</td>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ABC123",
+          },
+          "ref": null,
+          "rendered": "ABC123",
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Twikki",
+          },
+          "ref": null,
+          "rendered": "Twikki",
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Rogers",
+          },
+          "ref": null,
+          "rendered": "Rogers",
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 20,
+          },
+          "ref": null,
+          "rendered": 20,
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 30,
+          },
+          "ref": null,
+          "rendered": 30,
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 40,
+          },
+          "ref": null,
+          "rendered": 40,
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 90,
+          },
+          "ref": null,
+          "rendered": 90,
+          "type": "td",
+        },
+      ],
+      "type": "tr",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

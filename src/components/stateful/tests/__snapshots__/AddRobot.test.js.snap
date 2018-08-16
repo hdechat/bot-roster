@@ -1,0 +1,500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddRobot should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddRobot
+    addRobotToTeam={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <select
+          name="category"
+          onChange={[Function]}
+          required={true}
+>
+          <option
+                    value=""
+          >
+                    Select a Category
+          </option>
+          <option
+                    value="starters"
+          >
+                    starters
+          </option>
+          <option
+                    value="subs"
+          >
+                    subs
+          </option>
+</select>,
+        <input
+          minLength="2"
+          name="firstName"
+          onChange={[Function]}
+          placeholder="first name"
+          required={true}
+          value=""
+/>,
+        <input
+          minLength="2"
+          name="lastName"
+          onChange={[Function]}
+          placeholder="last name"
+          required={true}
+          value=""
+/>,
+        <input
+          name="speed"
+          onChange={[Function]}
+          placeholder="speed"
+          type="number"
+          value={0}
+/>,
+        <input
+          name="strength"
+          onChange={[Function]}
+          placeholder="strength"
+          type="number"
+          value={0}
+/>,
+        <input
+          name="agility"
+          onChange={[Function]}
+          placeholder="agility"
+          type="number"
+          value={0}
+/>,
+        <button
+          type="submit"
+>
+          Add Robot To Team
+</button>,
+      ],
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <option
+              value=""
+>
+              Select a Category
+</option>,
+            <option
+              value="starters"
+>
+              starters
+</option>,
+            <option
+              value="subs"
+>
+              subs
+</option>,
+          ],
+          "name": "category",
+          "onChange": [Function],
+          "required": true,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Select a Category",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": "Select a Category",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "starters",
+              "value": "starters",
+            },
+            "ref": null,
+            "rendered": "starters",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "subs",
+              "value": "subs",
+            },
+            "ref": null,
+            "rendered": "subs",
+            "type": "option",
+          },
+        ],
+        "type": "select",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "minLength": "2",
+          "name": "firstName",
+          "onChange": [Function],
+          "placeholder": "first name",
+          "required": true,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "minLength": "2",
+          "name": "lastName",
+          "onChange": [Function],
+          "placeholder": "last name",
+          "required": true,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "speed",
+          "onChange": [Function],
+          "placeholder": "speed",
+          "type": "number",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "strength",
+          "onChange": [Function],
+          "placeholder": "strength",
+          "type": "number",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "agility",
+          "onChange": [Function],
+          "placeholder": "agility",
+          "type": "number",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Add Robot To Team",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Add Robot To Team",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <select
+            name="category"
+            onChange={[Function]}
+            required={true}
+>
+            <option
+                        value=""
+            >
+                        Select a Category
+            </option>
+            <option
+                        value="starters"
+            >
+                        starters
+            </option>
+            <option
+                        value="subs"
+            >
+                        subs
+            </option>
+</select>,
+          <input
+            minLength="2"
+            name="firstName"
+            onChange={[Function]}
+            placeholder="first name"
+            required={true}
+            value=""
+/>,
+          <input
+            minLength="2"
+            name="lastName"
+            onChange={[Function]}
+            placeholder="last name"
+            required={true}
+            value=""
+/>,
+          <input
+            name="speed"
+            onChange={[Function]}
+            placeholder="speed"
+            type="number"
+            value={0}
+/>,
+          <input
+            name="strength"
+            onChange={[Function]}
+            placeholder="strength"
+            type="number"
+            value={0}
+/>,
+          <input
+            name="agility"
+            onChange={[Function]}
+            placeholder="agility"
+            type="number"
+            value={0}
+/>,
+          <button
+            type="submit"
+>
+            Add Robot To Team
+</button>,
+        ],
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <option
+                value=""
+>
+                Select a Category
+</option>,
+              <option
+                value="starters"
+>
+                starters
+</option>,
+              <option
+                value="subs"
+>
+                subs
+</option>,
+            ],
+            "name": "category",
+            "onChange": [Function],
+            "required": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select a Category",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": "Select a Category",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "starters",
+                "value": "starters",
+              },
+              "ref": null,
+              "rendered": "starters",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "subs",
+                "value": "subs",
+              },
+              "ref": null,
+              "rendered": "subs",
+              "type": "option",
+            },
+          ],
+          "type": "select",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "minLength": "2",
+            "name": "firstName",
+            "onChange": [Function],
+            "placeholder": "first name",
+            "required": true,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "minLength": "2",
+            "name": "lastName",
+            "onChange": [Function],
+            "placeholder": "last name",
+            "required": true,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "speed",
+            "onChange": [Function],
+            "placeholder": "speed",
+            "type": "number",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "strength",
+            "onChange": [Function],
+            "placeholder": "strength",
+            "type": "number",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "agility",
+            "onChange": [Function],
+            "placeholder": "agility",
+            "type": "number",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add Robot To Team",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Add Robot To Team",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

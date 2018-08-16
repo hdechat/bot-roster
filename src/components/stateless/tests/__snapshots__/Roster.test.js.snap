@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Roster matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Roster
+    team={
+        Object {
+            "starters": Array [
+              Object {
+                "agility": 40,
+                "firstName": "Twikki",
+                "id": "ABC123",
+                "lastName": "Rogers",
+                "speed": 20,
+                "strength": 30,
+                "totalAttrScore": 90,
+              },
+            ],
+            "subs": Array [
+              Object {
+                "agility": 40,
+                "firstName": "Voltron",
+                "id": "XXY678",
+                "lastName": "Smith",
+                "speed": 20,
+                "strength": 35,
+                "totalAttrScore": 95,
+              },
+            ],
+            "teamName": "Droids",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Droids
+</h1>,
+        <TableByCategory
+          header="Starters"
+          robots={
+                    Array [
+                              Object {
+                                "agility": 40,
+                                "firstName": "Twikki",
+                                "id": "ABC123",
+                                "lastName": "Rogers",
+                                "speed": 20,
+                                "strength": 30,
+                                "totalAttrScore": 90,
+                              },
+                            ]
+          }
+/>,
+        <TableByCategory
+          header="Subs"
+          robots={
+                    Array [
+                              Object {
+                                "agility": 40,
+                                "firstName": "Voltron",
+                                "id": "XXY678",
+                                "lastName": "Smith",
+                                "speed": 20,
+                                "strength": 35,
+                                "totalAttrScore": 95,
+                              },
+                            ]
+          }
+/>,
+      ],
+      "className": "Roster",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Droids",
+        },
+        "ref": null,
+        "rendered": "Droids",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "header": "Starters",
+          "robots": Array [
+            Object {
+              "agility": 40,
+              "firstName": "Twikki",
+              "id": "ABC123",
+              "lastName": "Rogers",
+              "speed": 20,
+              "strength": 30,
+              "totalAttrScore": 90,
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "header": "Subs",
+          "robots": Array [
+            Object {
+              "agility": 40,
+              "firstName": "Voltron",
+              "id": "XXY678",
+              "lastName": "Smith",
+              "speed": 20,
+              "strength": 35,
+              "totalAttrScore": 95,
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Droids
+</h1>,
+          <TableByCategory
+            header="Starters"
+            robots={
+                        Array [
+                                    Object {
+                                      "agility": 40,
+                                      "firstName": "Twikki",
+                                      "id": "ABC123",
+                                      "lastName": "Rogers",
+                                      "speed": 20,
+                                      "strength": 30,
+                                      "totalAttrScore": 90,
+                                    },
+                                  ]
+            }
+/>,
+          <TableByCategory
+            header="Subs"
+            robots={
+                        Array [
+                                    Object {
+                                      "agility": 40,
+                                      "firstName": "Voltron",
+                                      "id": "XXY678",
+                                      "lastName": "Smith",
+                                      "speed": 20,
+                                      "strength": 35,
+                                      "totalAttrScore": 95,
+                                    },
+                                  ]
+            }
+/>,
+        ],
+        "className": "Roster",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Droids",
+          },
+          "ref": null,
+          "rendered": "Droids",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "header": "Starters",
+            "robots": Array [
+              Object {
+                "agility": 40,
+                "firstName": "Twikki",
+                "id": "ABC123",
+                "lastName": "Rogers",
+                "speed": 20,
+                "strength": 30,
+                "totalAttrScore": 90,
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "header": "Subs",
+            "robots": Array [
+              Object {
+                "agility": 40,
+                "firstName": "Voltron",
+                "id": "XXY678",
+                "lastName": "Smith",
+                "speed": 20,
+                "strength": 35,
+                "totalAttrScore": 95,
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
