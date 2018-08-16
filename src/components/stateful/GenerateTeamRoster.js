@@ -3,16 +3,18 @@ import AddRobot from './AddRobot';
 import Roster from '../stateless/Roster';
 import * as errors from '../helpers/error-messages';
 
+const initialState = {
+  teamName: '',
+  starters: [],
+  subs: [],
+  error: ''
+};
+
 class GenerateTeamRoster extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      teamName: '',
-      starters: [],
-      subs: [],
-      error: ''
-    };
+    this.state = initialState;
 
     this.count = 0;
   };

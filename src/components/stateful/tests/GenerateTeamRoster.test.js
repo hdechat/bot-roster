@@ -21,6 +21,10 @@ describe('GenerateTeamRoster', () => {
     wrapper = shallow(<GenerateTeamRoster addTeamRoster={mockAddTeamRoster} />);
   });
 
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe('SUBMIT_TEAM_ROSTER', () => {
     const mockEvent = {preventDefault: jest.fn()};
 
