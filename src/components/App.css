@@ -86,3 +86,12 @@ tbody {
 th, td {
   border: solid thin;
 }
+
+li {
+  list-style-type: none
+}
+
+li:hover {
+  color: blue;
+  cursor: pointer;
+}
