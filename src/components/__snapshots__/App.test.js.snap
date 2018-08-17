@@ -26,8 +26,29 @@ ShallowWrapper {
                     Roster Bots
           </h1>
 </header>,
-        <GenerateTeamRoster
-          addTeamRoster={[Function]}
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          to="/create-roster"
+>
+          Create Team Roster
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          to="/rosters"
+>
+          View Team Rosters
+</NavLink>,
+        <Route
+          exact={true}
+          path="/create-roster"
+          render={[Function]}
+/>,
+        <Route
+          exact={true}
+          path="/rosters"
+          render={[Function]}
 />,
       ],
       "className": "App",
@@ -64,9 +85,52 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Create Team Roster",
+          "to": "/create-roster",
+        },
+        "ref": null,
+        "rendered": "Create Team Roster",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "View Team Rosters",
+          "to": "/rosters",
+        },
+        "ref": null,
+        "rendered": "View Team Rosters",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "addTeamRoster": [Function],
+          "exact": true,
+          "path": "/create-roster",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/rosters",
+          "render": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -91,8 +155,29 @@ ShallowWrapper {
                         Roster Bots
             </h1>
 </header>,
-          <GenerateTeamRoster
-            addTeamRoster={[Function]}
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/create-roster"
+>
+            Create Team Roster
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/rosters"
+>
+            View Team Rosters
+</NavLink>,
+          <Route
+            exact={true}
+            path="/create-roster"
+            render={[Function]}
+/>,
+          <Route
+            exact={true}
+            path="/rosters"
+            render={[Function]}
 />,
         ],
         "className": "App",
@@ -129,9 +214,52 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Create Team Roster",
+            "to": "/create-roster",
+          },
+          "ref": null,
+          "rendered": "Create Team Roster",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "View Team Rosters",
+            "to": "/rosters",
+          },
+          "ref": null,
+          "rendered": "View Team Rosters",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "addTeamRoster": [Function],
+            "exact": true,
+            "path": "/create-roster",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/rosters",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,

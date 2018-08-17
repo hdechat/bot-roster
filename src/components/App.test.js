@@ -1,6 +1,9 @@
 import React from 'react';
 import App from './App';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import GenerateTeamRoster from './stateful/GenerateTeamRoster';
+import ViewRosters from './stateful/ViewRosters';
 
 describe('App', () => {
   let wrapper = shallow(<App />);
@@ -24,10 +27,27 @@ describe('App', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('renders all expected elements', () => {
-    expect(wrapper.find('div.App').length).toEqual(1);
-    expect(wrapper.find('header').length).toEqual(1);
-    expect(wrapper.find('h1').length).toEqual(1);
-    expect(wrapper.find('GenerateTeamRoster').length).toEqual(1);
+  it('renders the GenerateTeamRoster component with the correct endpoint', () => {
+    expect(wrapper.find(GenerateTeamRoster).length).toEqual(0);
+
+    wrapper = mount(
+      <MemoryRouter initialEntries={[ '/create-roster']}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(wrapper.find(GenerateTeamRoster).length).toEqual(1);
+  });
+
+  it('renders the ViewRosters component with the correct endpoint', () => {
+    expect(wrapper.find(ViewRosters).length).toEqual(0);
+
+    wrapper = mount(
+      <MemoryRouter initialEntries={[ '/rosters']}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(wrapper.find(ViewRosters).length).toEqual(1);
   });
 });
