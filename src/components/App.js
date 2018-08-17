@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { NavLink, Route } from 'react-router-dom';
 import GenerateTeamRoster from './stateful/GenerateTeamRoster';
+import ViewRosters from './stateful/ViewRosters';
 import './App.css';
 
 class App extends Component {
@@ -19,7 +21,16 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Roster Bots</h1>
         </header>
-        <GenerateTeamRoster addTeamRoster={this.addTeamRoster}/>
+        <NavLink to='/create-roster'>Create Team Roster</NavLink>
+        <NavLink to='/rosters'>View Team Rosters</NavLink>
+
+        <Route exact path='/create-roster' render={() => {
+          return <GenerateTeamRoster addTeamRoster={this.addTeamRoster} />
+        }}/>
+        <Route exact path='/rosters' render={() => {
+          return <ViewRosters teams={this.state.teams} />
+        }}/>
+
       </div>
     );
   };
