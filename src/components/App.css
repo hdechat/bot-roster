@@ -24,6 +24,8 @@
 .Roster {
   margin: auto;
   width: 65%;
+  height: 75vh;
+  overflow-y: scroll;
 }
 
 .AddRobot {

@@ -9,5 +9,6 @@ body {
   padding-bottom: 40px;
   font-family: sans-serif;
   width: 80%;
+  min-height: 80vh;
   height: fit-content;
 }
