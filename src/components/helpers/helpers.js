@@ -1,12 +1,12 @@
-import * as errors from './error-messages';
+import * as error from './error-messages';
 
 export function validateTeamRoster({ teamName, starters, subs }) {
   if (!teamName) {
-    return errors.missingName;
+    return error.missingName;
   } else if (starters.length !== 10) {
-    return errors.badNumberOfStarters;
+    return error.badNumberOfStarters;
   } else if (subs.length !== 5) {
-    return errors.badNumberOfSubs;
+    return error.badNumberOfSubs;
   } else {
     return 'valid';
   }
@@ -35,15 +35,15 @@ export function validateNewRobot(robot,  state) {
     let categoryFull = checkForCategoryFull(category, state);
 
     if (totalAttrScore > 100) {
-      return errors.badScore;
+      return error.badScore;
     } else if (robotHasDupeStrength) {
-      return errors.duplicateScore;
+      return error.duplicateScore;
     } else if (robotHasDupeFirstName) {
-      return errors.duplicateFirstName;
+      return error.duplicateFirstName;
     } else if (robotHasDupeLastName) {
-      return errors.duplicateLastName;
+      return error.duplicateLastName;
     } else if (categoryFull) {
-      return errors.maxPlayers;
+      return error.maxPlayers;
     } else {
       return 'valid';
     }
@@ -70,11 +70,15 @@ export function checkForCategoryFull(category, state) {
 }
 
 export function checkForValidUpdate(dupeFirst, dupeLast, id) {
-  const fullChange = !dupeFirst && !dupeLast;
-  const firstNameChange = !dupeFirst && dupeLast.id === id;
-  const lastNameChange = !dupeLast && dupeFirst.id === id;
-  const noChange = dupeFirst && dupeLast
-    ? dupeFirst.id === id && dupeLast.id === id
-    : false;
-  return fullChange || firstNameChange || lastNameChange || noChange;
+  if (!dupeFirst && !dupeLast) {
+    return true;
+  } else if (!dupeFirst && dupeLast.id === id) {
+    return true;
+  } else if (!dupeLast && dupeFirst.id === id) {
+    return true;
+  } else if (dupeFirst && dupeLast) {
+    return dupeFirst.id === id && dupeLast.id === id;
+  } else {
+    return false;
+  }
 }
