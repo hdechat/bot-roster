@@ -8,9 +8,8 @@ class ViewRosters extends Component {
     this.state = {team: ''}
   }
   
-
   render() {
-    const teamsList = this.props.teams.map(team => <li>{team.teamName}</li>);
+    const teamsList = this.props.teams.map(team => <li onClick={()=>this.setState({ team })}>{team.teamName}</li>);
 
     return (
       <div className="ViewRosters">
