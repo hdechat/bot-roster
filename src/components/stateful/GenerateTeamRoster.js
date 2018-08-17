@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import AddRobot from './AddRobot';
 import Roster from '../stateless/Roster';
-import * as errors from '../helpers/error-messages';
+import * as error from '../helpers/error-messages';
+import * as helper from '../helpers/helpers';
 
 const initialState = {
   teamName: '',
@@ -22,31 +23,15 @@ class GenerateTeamRoster extends Component {
   submitTeamRoster = (event) => {
     event.preventDefault();
 
-    let rosterStatus = this.validateTeamRoster(this.state);
+    let rosterStatus = helper.validateTeamRoster(this.state);
 
     if (rosterStatus === 'valid') {
-      this.props.addTeamRoster({...this.state, error: ''});
-      this.clearStateValues();
+      this.props.addTeamRoster({ ...this.state, error: '' });
+      this.setState({ ...this.state, ...initialState });
       this.count = 0;
     } else {
-      this.setError(rosterStatus)
+      this.setState({ error: rosterStatus });
     }
-  };
-
-  validateTeamRoster({ teamName, starters, subs }) {
-    if (!teamName) {
-      return errors.missingName;
-    } else if (starters.length !== 10) {
-      return errors.badNumberOfStarters;
-    } else if (subs.length !== 5) {
-      return errors.badNumberOfSubs;
-    } else {
-      return 'valid';
-    }
-  }
-
-  clearStateValues = () => {
-    this.setState({ ...this.state, ...initialState });
   };
 
   deleteRobot = (robot) => {
@@ -58,83 +43,25 @@ class GenerateTeamRoster extends Component {
   };
 
   addRobotToTeam = (robot) => {
-    const { category, firstName, lastName, speed, strength, agility } = robot;
+    this.count++;
+    const { category } = robot;
+    const newRobot = helper.addIdAndTotalScore(robot, this.count);
+    let newRobotStatus = helper.validateNewRobot(newRobot, this.state);
 
-    const totalAttrScore = this.calculateTotalScore(speed, strength, agility);
-    const id = this.createId(firstName.slice(0, 2) + lastName.slice(0, 2));
-    const newRobot = {...robot, id, totalAttrScore}
-
-    let robotStatus = this.validateNewRobot(newRobot, totalAttrScore);
-
-    if (robotStatus === 'valid') {
+    if (newRobotStatus === 'valid') {
       this.setState({ [category]: [...this.state[category], newRobot], error: '' });
     } else {
       this.count--;
-      this.setError(robotStatus);
+      this.setState({ error: newRobotStatus });
     }
   };
-
-  validateNewRobot(robot, score) {
-    const { firstName, lastName, category } = robot;
-    let robotHasDupeStrength = this.checkForDuplicate('totalAttrScore', score);
-    let robotHasDupeFirstName = this.checkForDuplicate('firstName', firstName);
-    let robotHasDupeLastName = this.checkForDuplicate('lastName', lastName);
-    let categoryFull = this.checkForCategoryFull(category);
-
-    if (score > 100) {
-      return errors.badScore;
-    } else if (robotHasDupeStrength) {
-      return errors.duplicateScore;
-    } else if (robotHasDupeFirstName) {
-      return errors.duplicateFirstName;
-    } else if (robotHasDupeLastName) {
-      return errors.duplicateLastName;
-    } else if (categoryFull) {
-      return errors.maxPlayers;
-    } else {
-      return 'valid';
-    }
-  };
-
-  checkForCategoryFull(category) {
-    if (category === 'starters') {
-      return this.state.starters.length < 10 ? false : true;
-    } else {
-      return this.state.subs.length < 5 ? false : true;
-    }
-  }
-
-  checkForDuplicate(prop, value) {
-    const categories = ['starters', 'subs'];
-    let duplicate;
-    let count = 0;
-
-    while(!duplicate && count < categories.length) {
-      duplicate = this.state[categories[count]].find(bot => bot[prop] === value);
-      count++;
-    }
-
-    return duplicate;
-  }
-
-  createId(prefix) {
-    this.count++;
-    let teamNumber = this.count.toString();
-
-    prefix = teamNumber.length < 2 ? prefix += '0' : prefix;
-    return prefix + teamNumber;
-  }
-
-  calculateTotalScore(speed, strength, agility) {
-    return speed + strength + agility;
-  }
 
   updateName = (robot) => {
     const { category, id, firstName, lastName} = robot;
-    const duplicateFirstName = this.checkForDuplicate('firstName', firstName);
-    const duplicateLastName = this.checkForDuplicate('lastName', lastName);
+    const duplicateFirstName = helper.checkForDuplicate('firstName', firstName, this.state);
+    const duplicateLastName = helper.checkForDuplicate('lastName', lastName, this.state);
 
-    const validChange = this.checkForValidUpdate(duplicateFirstName, duplicateLastName, id)
+    const validChange = helper.checkForValidUpdate(duplicateFirstName, duplicateLastName, id);
 
     if (validChange) {
       const updatedBots = this.state[category].map(bot => {
@@ -143,24 +70,10 @@ class GenerateTeamRoster extends Component {
 
       this.setState({ [category]: updatedBots, error: '' });
     } else {
-        duplicateFirstName
-        ? this.setError(errors.duplicateFirstName)
-        : this.setError(errors.duplicateLastName);
+        duplicateFirstName.id !== id
+        ? this.setState({ error: error.duplicateFirstName })
+        : this.setState({ error: error.duplicateLastName });
     }
-  }
-
-  checkForValidUpdate(dupeFirst, dupeLast, id) {
-    const validFirstNameChange = !dupeFirst && dupeLast.id === id
-    const validLastNameChange = !dupeLast && dupeFirst.id === id
-    const noChange = dupeFirst && dupeLast
-      ? dupeFirst.id === id && dupeLast.id === id 
-      : false
-
-    return validFirstNameChange || validLastNameChange || noChange;
-  }
-
-  setError(error) {
-    this.setState({ error })
   }
 
   render() {
