@@ -18,7 +18,7 @@ class ViewRosters extends Component {
         <ul>
           {teamsList}
         </ul>
-        {this.state.team ? <Roster team={this.state.team} /> : ''}
+        {this.state.team ? <Roster team={this.state.team} inRosters={true}/> : ''}
       </div>
     )
   }

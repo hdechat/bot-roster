@@ -1,13 +1,14 @@
 import React from 'react';
 import Robot from './Robot';
 
-function TableByCategory({ header, robots, updateName, deleteRobot }) {
+function TableByCategory({ header, robots, updateName, deleteRobot, inRosters }) {
   const team = robots.map(bot => 
     <Robot 
       key={bot.firstName + bot.lastName + bot.totalAttrScore}
       robot={bot}
       updateName={updateName}
-      deleteRobot={deleteRobot} />
+      deleteRobot={deleteRobot}
+      inRosters={inRosters} />
   );
 
   return(

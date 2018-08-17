@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
-const initialState = {
-  category: '',
-  firstName: '',
-  lastName: '',
-  speed: 0,
-  strength: 0,
-  agility: 0,
-};
-
 class AddRobot extends Component {
   constructor(props) {
     super(props);
 
-    this.state = initialState;
+    this.state = {
+      category: '',
+      firstName: '',
+      lastName: '',
+      speed: 0,
+      strength: 0,
+      agility: 0,
+    };
   };
 
   updateUserInputText = (event) => {
@@ -33,7 +31,15 @@ class AddRobot extends Component {
   };
 
   clearStateValues = () => {
-    this.setState({ ...this.state, ...initialState });
+    const props = {
+      firstName: '',
+      lastName: '',
+      speed: 0,
+      strength: 0,
+      agility: 0,
+    };
+
+    this.setState({ ...this.state, ...props });
   }
 
   render() {
