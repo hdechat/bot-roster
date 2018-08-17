@@ -29,7 +29,7 @@ class GenerateTeamRoster extends Component {
       this.clearStateValues();
       this.count = 0;
     } else {
-      this.setState({error: rosterStatus})
+      this.setError(rosterStatus)
     }
   };
 
@@ -70,7 +70,7 @@ class GenerateTeamRoster extends Component {
       this.setState({ [category]: [...this.state[category], newRobot], error: '' });
     } else {
       this.count--;
-      this.setState({ error: robotStatus});
+      this.setError(robotStatus);
     }
   };
 
@@ -130,11 +130,37 @@ class GenerateTeamRoster extends Component {
   }
 
   updateName = (robot) => {
-    const updatedBots = this.state[robot.category].map(bot => {
-      return bot.id === robot.id ? robot : bot;
-    });
+    const { category, id, firstName, lastName} = robot;
+    const duplicateFirstName = this.checkForDuplicate('firstName', firstName);
+    const duplicateLastName = this.checkForDuplicate('lastName', lastName);
 
-    this.setState({ [robot.category]: updatedBots })
+    const validChange = this.checkForValidUpdate(duplicateFirstName, duplicateLastName, id)
+
+    if (validChange) {
+      const updatedBots = this.state[category].map(bot => {
+        return bot.id === id ? robot : bot;
+      });
+
+      this.setState({ [category]: updatedBots, error: '' });
+    } else {
+        duplicateFirstName
+        ? this.setError(errors.duplicateFirstName)
+        : this.setError(errors.duplicateLastName);
+    }
+  }
+
+  checkForValidUpdate(dupeFirst, dupeLast, id) {
+    const validFirstNameChange = !dupeFirst && dupeLast.id === id
+    const validLastNameChange = !dupeLast && dupeFirst.id === id
+    const noChange = dupeFirst && dupeLast
+      ? dupeFirst.id === id && dupeLast.id === id 
+      : false
+
+    return validFirstNameChange || validLastNameChange || noChange;
+  }
+
+  setError(error) {
+    this.setState({ error })
   }
 
   render() {
@@ -150,7 +176,11 @@ class GenerateTeamRoster extends Component {
         {!!this.state.error && <p className="generate__error-message">{this.state.error}</p>}
         <div className="generate__container">
           <AddRobot addRobotToTeam={this.addRobotToTeam}/>
-          <Roster deleteRobot={this.deleteRobot} updateName={this.updateName} team={this.state}/>
+          <Roster 
+            deleteRobot={this.deleteRobot}
+            updateName={this.updateName} 
+            team={this.state}
+            inRosters={false} />
         </div>
       </div>
     );

@@ -4,6 +4,8 @@ exports[`Robot matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Robot
+    deleteRobot={[Function]}
+    inRosters={false}
     robot={
         Object {
             "agility": 40,
@@ -15,6 +17,7 @@ ShallowWrapper {
             "totalAttrScore": 90,
           }
     }
+    team=""
     updateName={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Robot ({ robot, updateName, deleteRobot, team }) {
-  const { 
+function Robot ({ robot, updateName, deleteRobot, inRosters}) {
+  const {
     id,
     firstName,
     lastName,
@@ -21,7 +21,7 @@ function Robot ({ robot, updateName, deleteRobot, team }) {
   }
 
   const deleteButton = 
-    !team && <td><button onClick={()=>deleteRobot(robot)}>delete</button></td>
+     !inRosters && <td><button onClick={()=>deleteRobot(robot)}>delete</button></td>
   
 
   return (
@@ -29,16 +29,16 @@ function Robot ({ robot, updateName, deleteRobot, team }) {
       <td>{id}</td>
       <td
         className="firstName" 
-        contentEditable={!team ? true : false}
-        onBlur={!team ? changeName : ''}
-        onKeyPress={!team ? changeName : ''}>
+        contentEditable
+        onBlur={changeName}
+        onKeyPress={changeName}>
         {firstName}
       </td>
       <td
         className="lastName" 
-        contentEditable={!team ? true : false}
-        onBlur={!team ? changeName : ''}
-        onKeyPress={!team ? changeName : ''}>
+        contentEditable
+        onBlur={changeName}
+        onKeyPress={changeName}>
       {lastName}
       </td>
       <td>{speed}</td>
