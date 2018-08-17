@@ -102,7 +102,7 @@ describe('UPDATE_USER_INPUT_NUMBER', () => {
       wrapper.setState(mockUpdatedState)
       wrapper.instance().clearStateValues();
 
-      expect(wrapper.state()).toEqual(mockState);
+      expect(wrapper.state()).toEqual({...mockState, category: 'subs'});
     });
   });
 

@@ -32,9 +32,7 @@ ShallowWrapper {
 >
           Submit Team Roster
 </button>,
-        <p
-          className="generate__error-message"
-/>,
+        false,
         <div
           className="generate__container"
 >
@@ -43,6 +41,7 @@ ShallowWrapper {
           />
           <Roster
                     deleteRobot={[Function]}
+                    inRosters={false}
                     team={
                               Object {
                                         "error": "",
@@ -87,18 +86,7 @@ ShallowWrapper {
         "rendered": "Submit Team Roster",
         "type": "button",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-          "className": "generate__error-message",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "p",
-      },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -110,6 +98,7 @@ ShallowWrapper {
 />,
             <Roster
               deleteRobot={[Function]}
+              inRosters={false}
               team={
                             Object {
                                           "error": "",
@@ -142,6 +131,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "deleteRobot": [Function],
+              "inRosters": false,
               "team": Object {
                 "error": "",
                 "starters": Array [],
@@ -180,9 +170,7 @@ ShallowWrapper {
 >
             Submit Team Roster
 </button>,
-          <p
-            className="generate__error-message"
-/>,
+          false,
           <div
             className="generate__container"
 >
@@ -191,6 +179,7 @@ ShallowWrapper {
             />
             <Roster
                         deleteRobot={[Function]}
+                        inRosters={false}
                         team={
                                     Object {
                                                 "error": "",
@@ -235,18 +224,7 @@ ShallowWrapper {
           "rendered": "Submit Team Roster",
           "type": "button",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-            "className": "generate__error-message",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "p",
-        },
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -258,6 +236,7 @@ ShallowWrapper {
 />,
               <Roster
                 deleteRobot={[Function]}
+                inRosters={false}
                 team={
                                 Object {
                                                 "error": "",
@@ -290,6 +269,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "deleteRobot": [Function],
+                "inRosters": false,
                 "team": Object {
                   "error": "",
                   "starters": Array [],

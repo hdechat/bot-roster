@@ -51,6 +51,7 @@ ShallowWrapper {
         <TableByCategory
           deleteRobot={undefined}
           header="Starters"
+          inRosters={undefined}
           robots={
                     Array [
                               Object {
@@ -69,6 +70,7 @@ ShallowWrapper {
         <TableByCategory
           deleteRobot={undefined}
           header="Subs"
+          inRosters={undefined}
           robots={
                     Array [
                               Object {
@@ -107,6 +109,7 @@ ShallowWrapper {
         "props": Object {
           "deleteRobot": undefined,
           "header": "Starters",
+          "inRosters": undefined,
           "robots": Array [
             Object {
               "agility": 40,
@@ -131,6 +134,7 @@ ShallowWrapper {
         "props": Object {
           "deleteRobot": undefined,
           "header": "Subs",
+          "inRosters": undefined,
           "robots": Array [
             Object {
               "agility": 40,
@@ -164,6 +168,7 @@ ShallowWrapper {
           <TableByCategory
             deleteRobot={undefined}
             header="Starters"
+            inRosters={undefined}
             robots={
                         Array [
                                     Object {
@@ -182,6 +187,7 @@ ShallowWrapper {
           <TableByCategory
             deleteRobot={undefined}
             header="Subs"
+            inRosters={undefined}
             robots={
                         Array [
                                     Object {
@@ -220,6 +226,7 @@ ShallowWrapper {
           "props": Object {
             "deleteRobot": undefined,
             "header": "Starters",
+            "inRosters": undefined,
             "robots": Array [
               Object {
                 "agility": 40,
@@ -244,6 +251,7 @@ ShallowWrapper {
           "props": Object {
             "deleteRobot": undefined,
             "header": "Subs",
+            "inRosters": undefined,
             "robots": Array [
               Object {
                 "agility": 40,
