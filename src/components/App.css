@@ -29,14 +29,14 @@
 }
 
 .AddRobot {
-  margin: auto;
+  margin: 0 auto;
   width: 30%;
 }
 
 .generate__container {
   display: flex;
   border: solid;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
   width: 90%;
 }
@@ -62,14 +62,29 @@
   width: 100%;
 }
 
+.nav {
+  background: #fff;
+  text-decoration: none;
+  border: solid;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+}
+
 select {
   border-radius: 0;
   width: 80%;
+  height: 30px;
 }
 
 button {
   background: grey;
   color: #fff;
+  height: 30px;
+}
+
+input {
+  height: 25px;
 }
 
 table {
@@ -94,4 +109,23 @@ li {
 li:hover {
   color: blue;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+  body {
+    width: 100%;
+  }
+
+  .Roster {
+    width: 100%;
+  }
+
+  .AddRobot {
+    width: 100%;
+  }
+
+  .generate__container {
+    display: block;
+  }
+
 }

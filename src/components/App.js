@@ -21,8 +21,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Roster Bots</h1>
         </header>
-        <NavLink to='/create-roster'>Create Team Roster</NavLink>
-        <NavLink to='/rosters'>View Team Rosters</NavLink>
+        <NavLink className="nav" to='/create-roster'>Create Team Roster</NavLink>
+        <NavLink className="nav" to='/rosters'>View Team Rosters</NavLink>
 
         <Route exact path='/create-roster' render={() => {
           return <GenerateTeamRoster addTeamRoster={this.addTeamRoster} />
