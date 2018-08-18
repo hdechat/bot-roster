@@ -29,14 +29,14 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
       <td>{id}</td>
       <td
         className="firstName" 
-        contentEditable
+        contentEditable={!inRosters}
         onBlur={changeName}
         onKeyPress={changeName}>
         {firstName}
       </td>
       <td
         className="lastName" 
-        contentEditable
+        contentEditable={!inRosters}
         onBlur={changeName}
         onKeyPress={changeName}>
       {lastName}
