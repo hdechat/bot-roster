@@ -9,6 +9,7 @@ describe('Robot', () => {
   let mockDeleteRobot;
   let mockEventChangeFirstName;
   let mockEventChangeLastName;
+  let mockEventChangeLastNameWithTab;
 
   beforeEach(() => {
     mockEventChangeFirstName = {
@@ -27,6 +28,15 @@ describe('Robot', () => {
       },
       preventDefault: jest.fn(),
       which: 13
+    }
+
+    mockEventChangeLastNameWithTab = {
+      target: {
+        classList: ['lastName'],
+        innerText: 'Bot'
+      },
+      preventDefault: jest.fn(),
+      which: 9
     }
 
     mockRobot = {
@@ -78,7 +88,7 @@ describe('Robot', () => {
     expect(mockUpdateName).toHaveBeenCalledWith(expected);
   });
 
-  it('calls updateName with the correct params if user edits last name, leaves element than presses enter', () => {
+  it('calls updateName with the correct params if user edits last name, leaves element then presses enter', () => {
     wrapper.find('.lastName').prop('onBlur')(mockEventChangeLastName)
 
     const expected = {...mockRobot, lastName: 'Bot'}
@@ -86,6 +96,13 @@ describe('Robot', () => {
     expect(mockUpdateName).toHaveBeenCalledWith(expected);
   });
 
+  it('calls updateName with the correct params if user edits last name then presses tab', () => {
+    wrapper.find('.lastName').simulate('keypress', mockEventChangeLastNameWithTab);
+
+    const expected = {...mockRobot, lastName: 'Bot'}
+
+    expect(mockUpdateName).toHaveBeenCalledWith(expected);
+  });
 
   it('calls deleteRobot with the correct params on button click', () => {
     wrapper.find('button').simulate('click')
