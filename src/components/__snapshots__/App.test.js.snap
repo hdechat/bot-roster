@@ -29,6 +29,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           aria-current="page"
+          className="nav"
           to="/create-roster"
 >
           Create Team Roster
@@ -36,6 +37,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           aria-current="page"
+          className="nav"
           to="/rosters"
 >
           View Team Rosters
@@ -90,6 +92,7 @@ ShallowWrapper {
           "activeClassName": "active",
           "aria-current": "page",
           "children": "Create Team Roster",
+          "className": "nav",
           "to": "/create-roster",
         },
         "ref": null,
@@ -104,6 +107,7 @@ ShallowWrapper {
           "activeClassName": "active",
           "aria-current": "page",
           "children": "View Team Rosters",
+          "className": "nav",
           "to": "/rosters",
         },
         "ref": null,
@@ -158,6 +162,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             aria-current="page"
+            className="nav"
             to="/create-roster"
 >
             Create Team Roster
@@ -165,6 +170,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             aria-current="page"
+            className="nav"
             to="/rosters"
 >
             View Team Rosters
@@ -219,6 +225,7 @@ ShallowWrapper {
             "activeClassName": "active",
             "aria-current": "page",
             "children": "Create Team Roster",
+            "className": "nav",
             "to": "/create-roster",
           },
           "ref": null,
@@ -233,6 +240,7 @@ ShallowWrapper {
             "activeClassName": "active",
             "aria-current": "page",
             "children": "View Team Rosters",
+            "className": "nav",
             "to": "/rosters",
           },
           "ref": null,

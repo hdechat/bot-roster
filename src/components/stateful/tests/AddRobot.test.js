@@ -66,6 +66,29 @@ describe('UPDATE_USER_INPUT_NUMBER', () => {
 
       expect(wrapper.state()).toEqual(expectedState);
     });
+
+    it('should not update state if there is no value', () => {
+      wrapper.setState({speed: 5});
+
+      const mockEvent = {target: {
+        name: 'speed',
+        value: ''
+      }}
+
+      const expectedState = {
+        category: '',
+        firstName: '',
+        lastName: '',
+        speed: 5,
+        strength: 0,
+        agility: 0  
+      };   
+
+      wrapper.instance().updateUserInputNumber(mockEvent);
+
+      expect(wrapper.state()).toEqual(expectedState);
+
+    });
   });
 
   describe('ADD_TO_TEAM', () => {
