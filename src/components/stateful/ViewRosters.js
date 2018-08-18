@@ -10,11 +10,12 @@ class ViewRosters extends Component {
   
   render() {
     const teamsList = this.props.teams.map((team, index) => 
-      <li key={team.teamName + index} onClick={()=>this.setState({ team })}>{team.teamName}</li>
+      <li key={team.teamName + index} onClick={()=>this.setState({ team })}><p>{team.teamName}</p></li>
     );
 
     return (
       <div className="ViewRosters">
+        <p>Click on the team name to view the roster!</p>
         <ul>
           {teamsList}
         </ul>

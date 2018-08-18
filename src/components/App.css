@@ -102,6 +102,10 @@ th, td {
   border: solid thin;
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style-type: none;
   padding: 0;
@@ -110,6 +114,11 @@ li {
 li:hover {
   color: blue;
   cursor: pointer;
+}
+
+li p {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1050px) {
