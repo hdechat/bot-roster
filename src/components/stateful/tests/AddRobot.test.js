@@ -129,14 +129,6 @@ describe('UPDATE_USER_INPUT_NUMBER', () => {
     });
   });
 
-  it('renders the expected elements', () => {
-    expect(wrapper.find('form').length).toEqual(1);
-    expect(wrapper.find('select').length).toEqual(1);
-    expect(wrapper.find('option').length).toEqual(3);
-    expect(wrapper.find('input').length).toEqual(5);
-    expect(wrapper.find('button').length).toEqual(1);
-  });
-
   it('calls addToTeam on form submit', () => {
     wrapper = mount(<AddRobot addRobotToTeam={mockAddRobotToTeam} />)
     const spy = spyOn(wrapper.instance(), 'addToTeam');
