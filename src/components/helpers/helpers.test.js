@@ -214,7 +214,7 @@ describe('HELPERS', () => {
 
   describe('CHECK_FOR_DUPLICATE', () => {
     it('returns undefined if there is not duplicate found', () => {
-      const actual =helper.checkForDuplicate('firstName', 'Buzz', state);
+      const actual = helper.checkForDuplicate('firstName', 'Buzz', state);
 
       expect(actual).toEqual(undefined);
     });
@@ -231,7 +231,7 @@ describe('HELPERS', () => {
       expect(actual).toEqual(robotStarter);
     });
 
-    it('returns the robot object with duplicate strength', () => {
+    it('returns the robot object with duplicate lastName', () => {
       const actual = helper.checkForDuplicate('lastName', 'Robot', state);
 
       expect(actual).toEqual(robotStarter);
