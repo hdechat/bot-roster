@@ -14,7 +14,7 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
     const prop = [event.target.classList[0]];
     const value = event.target.innerText;
 
-    if (event.which === 13) {
+    if (event.which === 13 || event.which === 9) {
       event.preventDefault();
       updateName({...robot, [prop]: value});
     }
