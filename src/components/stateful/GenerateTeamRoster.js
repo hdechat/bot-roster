@@ -59,22 +59,17 @@ class GenerateTeamRoster extends Component {
   };
 
   updateName = (robot) => {
-    const { category, id, firstName, lastName} = robot;
-    const duplicateFirstName = helper.checkForDuplicate('firstName', firstName, this.state);
-    const duplicateLastName = helper.checkForDuplicate('lastName', lastName, this.state);
+    const { category, id} = robot;
+    const status = helper.checkForValidUpdate(robot, this.state, this.props.teams)
 
-    const validChange = helper.checkForValidUpdate(duplicateFirstName, duplicateLastName, id);
-
-    if (validChange) {
+    if (status === 'valid') {
       const updatedBots = this.state[category].map(bot => {
         return bot.id === id ? robot : bot;
       });
 
       this.setState({ [category]: updatedBots, error: '' });
     } else {
-        duplicateFirstName.id !== id
-        ? this.setState({ error: error.duplicateFirstName })
-        : this.setState({ error: error.duplicateLastName });
+        this.setState({ error: status })
     }
   }
 

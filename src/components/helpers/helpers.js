@@ -74,7 +74,7 @@ export function checkForDuplicate(prop, value, state) {
 
     while(!duplicate && count < categories.length) {
       duplicate = state[categories[count]].find(bot => {
-        if(typeof prop === 'string') {
+        if(typeof value === 'string') {
           return bot[prop].toLowerCase() === value.toLowerCase();
         } else {
           return bot[prop] === value;
@@ -93,16 +93,31 @@ export function checkForCategoryFull(category, state) {
     }
 }
 
-export function checkForValidUpdate(dupeFirst, dupeLast, id) {
-  if (!dupeFirst && !dupeLast) {
-    return true;
+export function checkForValidUpdate(robot, team, league) {
+  const { id, firstName, lastName} = robot;
+  const duplicateFirstName = checkForDuplicate('firstName', firstName, team);
+  const duplicateLastName = checkForDuplicate('lastName', lastName, team);
+  const duplicateNameInLeague = checkLeagueForDuplicateName(robot, league);
+
+  return validOrError(duplicateFirstName, duplicateLastName, duplicateNameInLeague, id);
+}
+
+export function validOrError(dupeFirst, dupeLast, dupeInLeague, id) {
+  if (!dupeFirst && !dupeLast && !dupeInLeague) { 
+    return 'valid';
+  } else if (dupeInLeague) {
+    return error.duplicateNameInLeague;
   } else if (!dupeFirst && dupeLast.id === id) {
-    return true;
+    return 'valid';
   } else if (!dupeLast && dupeFirst.id === id) {
-    return true;
-  } else if (dupeFirst && dupeLast) {
-    return dupeFirst.id === id && dupeLast.id === id;
-  } else {
-    return false;
-  }
+    return 'valid';
+  } else if (dupeFirst || dupeLast) {
+      if (dupeFirst.id === id && dupeLast.id === id) {
+        return 'valid';
+      } else if(dupeFirst.id !==id) {
+        return error.duplicateFirstName;
+      } else {
+        return error.duplicateLastName;
+      }; 
+  }       
 }

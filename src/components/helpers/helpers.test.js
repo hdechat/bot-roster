@@ -315,37 +315,68 @@ describe('HELPERS', () => {
   });
 
   describe('CHECK_FOR_VALID_UPDATE', () => {
-    it('returns true if there is neither a first or last dupe', () => {
-      const actual = helper.checkForValidUpdate(undefined, undefined, 'AABB101');
-      const expected = true;
+    it('should return valid if no duplicates are found', () => {
+      const actual = helper.checkForValidUpdate(robot, state, league);
+      const expected = 'valid';
 
       expect(actual).toEqual(expected);
     });
 
-    it('returns true if there is not a first dupe and the lastDupe.id equals id', () => {
-      const actual = helper.checkForValidUpdate(undefined, robot, 'ABC123');
-      const expected = true;
+    it('should return error string if a duplicate is found', () => {
+      const newRobot = {...robot, firstName: 'Rosie'}
+
+      const actual = helper.checkForValidUpdate(newRobot, state, league);
+      const expected = error.duplicateFirstName;
+
+      expect(actual).toEqual(expected);
+    });
+  });  
+
+  describe('VALID_OR_ERROR', () => {
+    it('returns valid if all dupes are undefined', () => {
+      const actual = helper.validOrError(undefined, undefined, undefined, 'ABC123');
+      const expected = 'valid';
 
       expect(actual).toEqual(expected);
     });
 
-    it('returns true if there is not a lastdupe and the first dupe.id equals id', () => {
-      const actual = helper.checkForValidUpdate(robot, undefined, 'ABC123');
-      const expected = true;
+    it('returns correct error string if there is a dupe name in the league', () => {
+      const actual = helper.validOrError(undefined, undefined, robot, 'ABC123', );
+      const expected = error.duplicateNameInLeague;
 
       expect(actual).toEqual(expected);
     });
 
-    it('returns true if both dupes are the same', () => {
-      const actual = helper.checkForValidUpdate(robot, robot, 'ABC123');
-      const expected = true;
+    it('returns valid if there is not a firstDupe and the lastDupe.id equals id', () => {
+      const actual = helper.validOrError(undefined, robot, undefined, 'ABC123');
+      const expected = 'valid';
 
       expect(actual).toEqual(expected);
     });
 
-    it('returns false if both dupes are not the same', () => {
-      const actual = helper.checkForValidUpdate(robot, robotSub, 'ABC123');
-      const expected = false;
+    it('returns valid if there is not a lastDupe and the firstDupe.id equals id', () => {
+      const actual = helper.validOrError(robot, undefined, undefined, 'ABC123');
+      const expected = 'valid';
+
+      expect(actual).toEqual(expected);
+    });
+
+    it('returns valid if both firstDupe.id and LastDupe.id equals id', () => {
+      const actual = helper.validOrError(robot, robot, undefined, 'ABC123');
+      const expected = 'valid';
+
+      expect(actual).toEqual(expected);
+    });
+
+    it('returns correct error string if dupeFirst.id does not equal id', () => {
+      const actual = helper.validOrError(robotSub, robot, undefined, 'ABC123');
+      const expected = error.duplicateFirstName;
+
+      expect(actual).toEqual(expected);
+    });
+    it('returns correct error string if dupeLast.id does not equal id', () => {
+      const actual = helper.validOrError(robot, robotSub, undefined, 'ABC123');
+      const expected = error.duplicateLastName;
 
       expect(actual).toEqual(expected);
     });
