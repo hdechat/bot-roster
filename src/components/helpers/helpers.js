@@ -73,7 +73,13 @@ export function checkForDuplicate(prop, value, state) {
     let count = 0;
 
     while(!duplicate && count < categories.length) {
-      duplicate = state[categories[count]].find(bot => bot[prop] === value);
+      duplicate = state[categories[count]].find(bot => {
+        if(typeof prop === 'string') {
+          return bot[prop].toLowerCase() === value.toLowerCase();
+        } else {
+          return bot[prop] === value;
+        }
+      });
       count++;
     }
     return duplicate;
