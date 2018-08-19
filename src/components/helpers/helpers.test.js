@@ -9,6 +9,7 @@ describe('HELPERS', () => {
   let fullState;
   let starters;
   let subs;
+  let league;
 
   beforeEach(() => {
     robot = {
@@ -82,6 +83,8 @@ describe('HELPERS', () => {
       subs,
       error: ''
     };
+
+    league = [fullState]
   });
 
   describe('VALIDATE_TEAM_ROSTER', () => {
@@ -157,7 +160,7 @@ describe('HELPERS', () => {
     it('returns correct error string if score is > 100', () => {
       let tooStrongRobot = {...robot, totalAttrScore: 200}
 
-      const actual = helper.validateNewRobot(tooStrongRobot, state);
+      const actual = helper.validateNewRobot(tooStrongRobot, state, league);
       const expected = error.badScore;
 
       expect(actual).toEqual(expected);
@@ -165,7 +168,7 @@ describe('HELPERS', () => {
 
     it('returns correct error string if score is not unique', () => {
       let dupeScoreRobot = {...robot, totalAttrScore: 9}    ;
-      const actual = helper.validateNewRobot(dupeScoreRobot, fullState);
+      const actual = helper.validateNewRobot(dupeScoreRobot, fullState, league);
       const expected = error.duplicateScore;
 
       expect(actual).toEqual(expected);
@@ -174,7 +177,7 @@ describe('HELPERS', () => {
     it('returns correct error string if firstName is not unique', () => {
       let dupeNameRobot = {...robot, firstName: 'Rosie'}
 
-      const actual = helper.validateNewRobot(dupeNameRobot, state);
+      const actual = helper.validateNewRobot(dupeNameRobot, state, league);
       const expected = error.duplicateFirstName;
 
       expect(actual).toEqual(expected);
@@ -183,7 +186,7 @@ describe('HELPERS', () => {
     it('returns correct error string if lastName is not unique', () => {
       let dupeNameRobot = {...robot, lastName: 'Robot'}
 
-      const actual = helper.validateNewRobot(dupeNameRobot, state);
+      const actual = helper.validateNewRobot(dupeNameRobot, state, league);
       const expected = error.duplicateLastName;
       
       expect(actual).toEqual(expected);
@@ -191,7 +194,7 @@ describe('HELPERS', () => {
 
     it('returns correct error string if there are maximum number of starters', () => {
       state = {...fullState, subs: []}
-      const actual = helper.validateNewRobot(robotStarter, state);
+      const actual = helper.validateNewRobot(robotStarter, state, league);
       const expected = error.maxPlayers;
 
       expect(actual).toEqual(expected);
@@ -199,16 +202,59 @@ describe('HELPERS', () => {
 
     it('returns correct errors string if there are maximum number of subs', () => {
       state = {...fullState, starters: []}
-      const actual = helper.validateNewRobot(robotSub, state);
+      const actual = helper.validateNewRobot(robotSub, state, league);
       const expected = error.maxPlayers;
 
       expect(actual).toEqual(expected);
     });
 
     it('returns valid if none of the checkForDuplicate returns return a result', () => {
-      const actual = helper.validateNewRobot(robot, state);
+      const actual = helper.validateNewRobot(robot, state, league);
 
       expect(actual).toEqual('valid');
+    });
+  });
+
+  describe('CHECK_LEAGUE_FOR_DUPLICATE_NAME', () => {
+    it('returns undefined if there are no duplicates found', () => {
+      const actual = helper.checkLeagueForDuplicateName(robot, league);
+      const expected = undefined;
+
+      expect(actual).toEqual(expected);
+    });
+
+    it('returns the robot object with the same first name', () => {
+      let dupeRobot = {...robot, firstName: '0Twikki'}
+
+      const actual = helper.checkLeagueForDuplicateName(dupeRobot, league);
+      const expected = {
+        "id": "ABC120", 
+        "firstName": "0Twikki", 
+        "lastName": "0Rogers", 
+        "speed": 2, 
+        "strength": 3, 
+        "agility": 4, 
+        "totalAttrScore": 9
+      };
+
+      expect(actual).toEqual(expected);
+    });
+
+    it('returns the robot with the same last name', () => {
+      let dupeRobot = {...robot, lastName: '0Rogers'}
+
+      const actual = helper.checkLeagueForDuplicateName(dupeRobot, league);
+      const expected = {
+        "id": "ABC120", 
+        "firstName": "0Twikki", 
+        "lastName": "0Rogers", 
+        "speed": 2, 
+        "strength": 3, 
+        "agility": 4, 
+        "totalAttrScore": 9
+      };
+
+      expect(actual).toEqual(expected);
     });
   });
 
