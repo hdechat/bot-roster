@@ -19,6 +19,7 @@ describe('App', () => {
   });
 
   it('adds team to team array in state', () => {
+    wrapper.setState({ teams: [] })
     wrapper.instance().addTeamRoster(mockTeam);
 
     const actual = wrapper.state();

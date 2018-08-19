@@ -45,8 +45,9 @@ class GenerateTeamRoster extends Component {
   addRobotToTeam = (robot) => {
     this.count++;
     const { category } = robot;
+
     const newRobot = helper.addIdAndTotalScore(robot, this.count);
-    let newRobotStatus = helper.validateNewRobot(newRobot, this.state);
+    let newRobotStatus = helper.validateNewRobot(newRobot, this.state, this.props.teams);
 
     if (newRobotStatus === 'valid') {
       this.setState({ [category]: [...this.state[category], newRobot], error: '' });

@@ -10,6 +10,7 @@ describe('GenerateTeamRoster', () => {
   let mockState;
   let mockRobotStarter; 
   let mockRobotSub;
+  let mockTeams
 
 
   beforeEach(() => {
@@ -43,7 +44,7 @@ describe('GenerateTeamRoster', () => {
         speed: 12 + i,
         strength: 13 + i,
         agility: 14 + i,
-        totalAttrScore: 19 + i
+        totalAttrScore: 39 + i
       });
     }
 
@@ -56,29 +57,28 @@ describe('GenerateTeamRoster', () => {
 
     mockRobotStarter = {
       category: 'starters',
-      id: 'ABC121',
-      firstName: '1Twikki',
-      lastName: '1Rogers',
-      speed: 3,
-      strength: 4,
-      agility: 5,
-      totalAttrScore: 12
-    }
+      firstName: 'C3',
+      lastName: 'P0',
+      speed: 1,
+      strength: 1,
+      agility: 1,
+    };
 
     mockRobotSub = {
-      category: 'subs',
-      id: 'DEF121',
-      firstName: '1Kki',
-      lastName: '1Gers',
-      speed: 13,
-      strength: 14,
-      agility: 15,
-      totalAttrScore: 42
-    }
+        category: 'subs',
+        firstName: 'R2',
+        lastName: 'D2',
+        speed: 0,
+        strength: 0,
+        agility: 0,
+    };
 
     mockAddTeamRoster = jest.fn();
+    mockTeams = [mockState]
 
-    wrapper = shallow(<GenerateTeamRoster addTeamRoster={mockAddTeamRoster} />);
+    wrapper = shallow(<GenerateTeamRoster 
+      addTeamRoster={mockAddTeamRoster}
+      teams={mockTeams} />);
   });
 
   it('matches snapshot', () => {
@@ -135,7 +135,18 @@ describe('GenerateTeamRoster', () => {
 
   describe('DELETE_ROBOT', () => {
     it('deletes robot from starters', () => {
-      wrapper.setState(mockState)
+      mockRobotStarter  = {
+        id: 'ABC121',
+        category: 'starters',
+        firstName: '1Twikki',
+        lastName: '1Rogers',
+        speed: 3,
+        strength: 4,
+        agility: 5,
+        totalAttrScore: 12
+      }
+
+      wrapper.setState(mockState);
       expect(wrapper.state('starters').length).toEqual(10);
 
       wrapper.instance().deleteRobot(mockRobotStarter);
@@ -144,6 +155,16 @@ describe('GenerateTeamRoster', () => {
     });
 
     it('deletes robot from subs', () => {
+      mockRobotSub = {
+        id: 'DEF121',
+        category: 'subs',
+        firstName: '1Kki',
+        lastName: '1Gers',
+        speed: 13,
+        strength: 14,
+        agility: 15,
+        totalAttrScore: 42
+      }
       wrapper.setState(mockState)
       expect(wrapper.state('subs').length).toEqual(5);
 
@@ -167,7 +188,7 @@ describe('GenerateTeamRoster', () => {
     it('adds robot to the starters category', () => {
       const mockUpdatedState = {
         teamName: '',
-        starters: [{...mockRobotStarter, id: '1T1R01', totalAttrScore: 12}],
+        starters: [{...mockRobotStarter, id: 'C3P001', totalAttrScore: 3}],
         subs: [],
         error: ''
       }
@@ -181,7 +202,7 @@ describe('GenerateTeamRoster', () => {
       const mockUpdatedState = {
         teamName: '',
         starters: [],
-        subs: [{...mockRobotSub, id: '1K1G01', totalAttrScore: 42}],
+        subs: [{...mockRobotSub, id: 'R2D201', totalAttrScore: 0}],
         error: ''
       }
 
@@ -212,13 +233,29 @@ describe('GenerateTeamRoster', () => {
     });
 
     it('sets correct error string if totalAttrScore is a duplicate', () => {
+      mockState = {
+        teamName: '',
+        starters: [],
+        subs: [{
+          id: 'R2D201',
+          category: 'subs',
+          firstName: 'R2',
+          lastName: 'D2',
+          speed: 0,
+          strength: 0,
+          agility: 0,
+          totalAttrScore: 0
+        }],
+        error: ''
+      }
+
       const mockRobotDupe = {
         category: 'starters',
         firstName: 'Twiki',
         lastName: 'Rogers',
-        speed: 2,
-        strength: 3,
-        agility: 5,
+        speed: 0,
+        strength: 0,
+        agility: 0,
         error: ''
       };
 
@@ -228,13 +265,29 @@ describe('GenerateTeamRoster', () => {
       expect(wrapper.state('error')).toEqual(errors.duplicateScore);
     });
 
-    it('changes state.error if firstName is a duplicate in the team', () => {
+    it('sets correct error string if firstName is a duplicate in the team', () => {
+      mockState = {
+        teamName: '',
+        starters: [],
+        subs: [{
+          id: 'R2D201',
+          category: 'subs',
+          firstName: 'R2',
+          lastName: 'D2',
+          speed: 0,
+          strength: 0,
+          agility: 0,
+          totalAttrScore: 0
+        }],
+        error: ''
+      }
+
       const mockRobotDupe = {
         category: 'starters',
-        firstName: '0Twikki',
+        firstName: 'R2',
         lastName: 'Rogers',
-        speed: 2,
-        strength: 3,
+        speed: 1,
+        strength: 2,
         agility: 3,
         error: ''
       };
@@ -246,12 +299,28 @@ describe('GenerateTeamRoster', () => {
     });
 
     it('sets correct error string if lastName is a duplicate in the team', () => {
+      mockState = {
+        teamName: '',
+        starters: [],
+        subs: [{
+          id: 'R2D201',
+          category: 'subs',
+          firstName: 'R2',
+          lastName: 'D2',
+          speed: 0,
+          strength: 0,
+          agility: 0,
+          totalAttrScore: 0
+        }],
+        error: ''
+      }
+
       const mockRobotDupe = {
         category: 'starters',
         firstName: 'Twiki',
-        lastName: '0Rogers',
-        speed: 2,
-        strength: 3,
+        lastName: 'D2',
+        speed: 1,
+        strength: 2,
         agility: 3,
         error: ''
       };
@@ -260,6 +329,41 @@ describe('GenerateTeamRoster', () => {
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
       expect(wrapper.state('error')).toEqual(errors.duplicateLastName);
+    });
+
+    it('sets correct error string if name is a duplicate in the league', () => {
+      const mockRobotDupe = {
+        category: 'starters',
+        firstName: '0Twiki',
+        lastName: '1Gers',
+        speed: 3,
+        strength: 4,
+        agility: 5,
+        error: ''
+      };
+
+      wrapper.setState(mockInitialState);
+      wrapper.instance().addRobotToTeam(mockRobotDupe);
+
+      expect(wrapper.state('error')).toEqual(errors.duplicateNameInLeague);
+    });
+
+    it('sets correct error string if starters category is full', () => {
+      let mockFullStarters = {...mockState, subs: []}
+      
+      wrapper.setState(mockFullStarters);
+      wrapper.instance().addRobotToTeam(mockRobotStarter);
+
+      expect(wrapper.state('error')).toEqual(errors.maxPlayers);
+    });
+
+    it('sets correct error string if subs category is full', () => {
+      let mockFullStarters = {...mockState, starters: []}
+      
+      wrapper.setState(mockFullStarters);
+      wrapper.instance().addRobotToTeam(mockRobotSub);
+
+      expect(wrapper.state('error')).toEqual(errors.maxPlayers);
     });
   });
 

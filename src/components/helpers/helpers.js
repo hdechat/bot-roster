@@ -27,12 +27,13 @@ export function createId(prefix, count) {
     return prefix + teamNumber;
 }
 
-export function validateNewRobot(robot,  state) {
+export function validateNewRobot(robot,  team, league) {
     const { firstName, lastName, category, totalAttrScore } = robot;
-    let robotHasDupeStrength = checkForDuplicate('totalAttrScore', totalAttrScore, state);
-    let robotHasDupeFirstName = checkForDuplicate('firstName', firstName, state);
-    let robotHasDupeLastName = checkForDuplicate('lastName', lastName, state);
-    let categoryFull = checkForCategoryFull(category, state);
+    let robotHasDupeStrength = checkForDuplicate('totalAttrScore', totalAttrScore, team);
+    let robotHasDupeFirstName = checkForDuplicate('firstName', firstName, team);
+    let robotHasDupeLastName = checkForDuplicate('lastName', lastName, team);
+    let robotHasDupeNameInLeague = checkLeagueForDuplicateName(robot, league);
+    let categoryFull = checkForCategoryFull(category, team, league);
 
     if (totalAttrScore > 100) {
       return error.badScore;
@@ -42,12 +43,29 @@ export function validateNewRobot(robot,  state) {
       return error.duplicateFirstName;
     } else if (robotHasDupeLastName) {
       return error.duplicateLastName;
+    } else if (robotHasDupeNameInLeague) {
+      return error.duplicateNameInLeague;
     } else if (categoryFull) {
       return error.maxPlayers;
     } else {
       return 'valid';
     }
 };
+
+export function checkLeagueForDuplicateName(robot, league) {
+  const { firstName, lastName } = robot;
+  let count = 0;
+  let dupeFirstName;
+  let dupeLastName;
+
+  while(!dupeFirstName && !dupeLastName && count < league.length) {
+    dupeFirstName = checkForDuplicate('firstName', firstName, league[count]);
+    dupeLastName = checkForDuplicate('lastName', lastName, league[count]);
+    count++
+  }
+
+  return dupeFirstName || dupeLastName;
+}
 
 export function checkForDuplicate(prop, value, state) {
     const categories = ['starters', 'subs'];
