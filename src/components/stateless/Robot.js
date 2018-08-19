@@ -17,6 +17,7 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
     if (event.which === 13 || event.which === 9) {
       event.preventDefault();
       updateName({...robot, [prop]: value});
+      document.getElementById(prop+id).innerText = robot[prop];
     }
   }
 
@@ -28,6 +29,7 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
     <tr>
       <td>{id}</td>
       <td
+        id={'firstName' + id}
         className="firstName" 
         contentEditable={!inRosters}
         onBlur={changeName}
@@ -35,6 +37,7 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
         {firstName}
       </td>
       <td
+        id={'lastName' + id}
         className="lastName" 
         contentEditable={!inRosters}
         onBlur={changeName}
