@@ -14,6 +14,11 @@ function TableByCategory({ header, robots, updateName, deleteRobot, inRosters })
   return(
     <table>
       <thead>
+        <tr>
+          <th className="header__category" colSpan="7">{ header }</th>
+        </tr>
+      </thead>
+      <thead>
         <tr className="header__titles">
           <th>ID</th>
           <th>FIRST NAME</th>
@@ -22,11 +27,6 @@ function TableByCategory({ header, robots, updateName, deleteRobot, inRosters })
           <th>STRENGTH</th>
           <th>AGILITY</th>
           <th>TTL ATTRIBUTES SCORE</th>
-        </tr>
-      </thead>
-      <thead>
-        <tr>
-          <th className="header__category" colSpan="7">{ header }</th>
         </tr>
       </thead>
       <tbody>
