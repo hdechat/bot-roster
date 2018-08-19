@@ -40,6 +40,7 @@ class GenerateTeamRoster extends Component {
     const filtered = this.state[category].filter(bot => bot.id !== id);
 
     this.setState({ [category]: filtered });
+    this.count--;
   };
 
   addRobotToTeam = (robot) => {
