@@ -39,6 +39,7 @@ ShallowWrapper {
         <td
           className="firstName"
           contentEditable={true}
+          id="firstNameABC123"
           onBlur={[Function]}
           onKeyPress={[Function]}
 >
@@ -47,6 +48,7 @@ ShallowWrapper {
         <td
           className="lastName"
           contentEditable={true}
+          id="lastNameABC123"
           onBlur={[Function]}
           onKeyPress={[Function]}
 >
@@ -94,6 +96,7 @@ ShallowWrapper {
           "children": "Twikki",
           "className": "firstName",
           "contentEditable": true,
+          "id": "firstNameABC123",
           "onBlur": [Function],
           "onKeyPress": [Function],
         },
@@ -109,6 +112,7 @@ ShallowWrapper {
           "children": "Rogers",
           "className": "lastName",
           "contentEditable": true,
+          "id": "lastNameABC123",
           "onBlur": [Function],
           "onKeyPress": [Function],
         },
@@ -202,6 +206,7 @@ ShallowWrapper {
           <td
             className="firstName"
             contentEditable={true}
+            id="firstNameABC123"
             onBlur={[Function]}
             onKeyPress={[Function]}
 >
@@ -210,6 +215,7 @@ ShallowWrapper {
           <td
             className="lastName"
             contentEditable={true}
+            id="lastNameABC123"
             onBlur={[Function]}
             onKeyPress={[Function]}
 >
@@ -257,6 +263,7 @@ ShallowWrapper {
             "children": "Twikki",
             "className": "firstName",
             "contentEditable": true,
+            "id": "firstNameABC123",
             "onBlur": [Function],
             "onKeyPress": [Function],
           },
@@ -272,6 +279,7 @@ ShallowWrapper {
             "children": "Rogers",
             "className": "lastName",
             "contentEditable": true,
+            "id": "lastNameABC123",
             "onBlur": [Function],
             "onKeyPress": [Function],
           },

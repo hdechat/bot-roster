@@ -51,6 +51,7 @@ describe('Robot', () => {
 
     mockUpdateName = jest.fn();
     mockDeleteRobot = jest.fn();
+    document.getElementById = (id) => (wrapper.find('#id'))
 
     wrapper = shallow(<Robot 
       team={''}
@@ -65,6 +66,7 @@ describe('Robot', () => {
   });
 
   it('calls updateName with the correct params if user edits first name then presses enter', () => {
+
     wrapper.find('.firstName').simulate('keypress', mockEventChangeFirstName);
 
     const expected = {...mockRobot, firstName: 'Buck'}

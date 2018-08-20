@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AddRobot from './AddRobot';
 import Roster from '../stateless/Roster';
-import * as error from '../helpers/error-messages';
 import * as helper from '../helpers/helpers';
 
 const initialState = {
@@ -69,7 +68,7 @@ class GenerateTeamRoster extends Component {
 
       this.setState({ [category]: updatedBots, error: '' });
     } else {
-        this.setState({ error: status })
+      this.setState({ error: status })
     }
   }
 
