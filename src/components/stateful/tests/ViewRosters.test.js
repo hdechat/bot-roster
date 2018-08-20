@@ -13,10 +13,10 @@ describe('ViewRosters', () => {
     }];
 
     mockState = {
-      team: {teamName: 'BuzzHerds'}
+     teamName: 'BuzzHerds'
     };
 
-    wrapper = shallow(<ViewRosters teams={mockTeams} />);
+    wrapper = shallow(<ViewRosters teams={mockTeams} updateNameinLeague={jest.fn} />);
   });
 
   it('should update state when user clicks on list item', () => {

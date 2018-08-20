@@ -65,7 +65,9 @@ ShallowWrapper {
                               },
                             ]
           }
+          teamName="Droids"
           updateName={undefined}
+          updateNameinLeague={undefined}
 />,
         <TableByCategory
           deleteRobot={undefined}
@@ -84,7 +86,9 @@ ShallowWrapper {
                               },
                             ]
           }
+          teamName="Droids"
           updateName={undefined}
+          updateNameinLeague={undefined}
 />,
       ],
       "className": "Roster",
@@ -121,7 +125,9 @@ ShallowWrapper {
               "totalAttrScore": 90,
             },
           ],
+          "teamName": "Droids",
           "updateName": undefined,
+          "updateNameinLeague": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -146,7 +152,9 @@ ShallowWrapper {
               "totalAttrScore": 95,
             },
           ],
+          "teamName": "Droids",
           "updateName": undefined,
+          "updateNameinLeague": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -182,7 +190,9 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            teamName="Droids"
             updateName={undefined}
+            updateNameinLeague={undefined}
 />,
           <TableByCategory
             deleteRobot={undefined}
@@ -201,7 +211,9 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            teamName="Droids"
             updateName={undefined}
+            updateNameinLeague={undefined}
 />,
         ],
         "className": "Roster",
@@ -238,7 +250,9 @@ ShallowWrapper {
                 "totalAttrScore": 90,
               },
             ],
+            "teamName": "Droids",
             "updateName": undefined,
+            "updateNameinLeague": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -263,7 +277,9 @@ ShallowWrapper {
                 "totalAttrScore": 95,
               },
             ],
+            "teamName": "Droids",
             "updateName": undefined,
+            "updateNameinLeague": undefined,
           },
           "ref": null,
           "rendered": null,

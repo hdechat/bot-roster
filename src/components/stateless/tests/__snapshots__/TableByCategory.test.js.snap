@@ -93,7 +93,9 @@ ShallowWrapper {
                                         "totalAttrScore": 90,
                                       }
                     }
+                    teamName={undefined}
                     updateName={undefined}
+                    updateNameinLeague={undefined}
           />
           <Robot
                     deleteRobot={undefined}
@@ -109,7 +111,9 @@ ShallowWrapper {
                                         "totalAttrScore": 22,
                                       }
                     }
+                    teamName={undefined}
                     updateName={undefined}
+                    updateNameinLeague={undefined}
           />
 </tbody>,
       ],
@@ -327,7 +331,9 @@ ShallowWrapper {
                                           "totalAttrScore": 90,
                                         }
               }
+              teamName={undefined}
               updateName={undefined}
+              updateNameinLeague={undefined}
 />,
             <Robot
               deleteRobot={undefined}
@@ -343,7 +349,9 @@ ShallowWrapper {
                                           "totalAttrScore": 22,
                                         }
               }
+              teamName={undefined}
               updateName={undefined}
+              updateNameinLeague={undefined}
 />,
           ],
         },
@@ -365,7 +373,9 @@ ShallowWrapper {
                 "strength": 30,
                 "totalAttrScore": 90,
               },
+              "teamName": undefined,
               "updateName": undefined,
+              "updateNameinLeague": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -387,7 +397,9 @@ ShallowWrapper {
                 "strength": 8,
                 "totalAttrScore": 22,
               },
+              "teamName": undefined,
               "updateName": undefined,
+              "updateNameinLeague": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -458,7 +470,9 @@ ShallowWrapper {
                                                 "totalAttrScore": 90,
                                               }
                         }
+                        teamName={undefined}
                         updateName={undefined}
+                        updateNameinLeague={undefined}
             />
             <Robot
                         deleteRobot={undefined}
@@ -474,7 +488,9 @@ ShallowWrapper {
                                                 "totalAttrScore": 22,
                                               }
                         }
+                        teamName={undefined}
                         updateName={undefined}
+                        updateNameinLeague={undefined}
             />
 </tbody>,
         ],
@@ -692,7 +708,9 @@ ShallowWrapper {
                                                 "totalAttrScore": 90,
                                               }
                 }
+                teamName={undefined}
                 updateName={undefined}
+                updateNameinLeague={undefined}
 />,
               <Robot
                 deleteRobot={undefined}
@@ -708,7 +726,9 @@ ShallowWrapper {
                                                 "totalAttrScore": 22,
                                               }
                 }
+                teamName={undefined}
                 updateName={undefined}
+                updateNameinLeague={undefined}
 />,
             ],
           },
@@ -730,7 +750,9 @@ ShallowWrapper {
                   "strength": 30,
                   "totalAttrScore": 90,
                 },
+                "teamName": undefined,
                 "updateName": undefined,
+                "updateNameinLeague": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -752,7 +774,9 @@ ShallowWrapper {
                   "strength": 8,
                   "totalAttrScore": 22,
                 },
+                "teamName": undefined,
                 "updateName": undefined,
+                "updateNameinLeague": undefined,
               },
               "ref": null,
               "rendered": null,
