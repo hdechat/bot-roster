@@ -1,7 +1,7 @@
 import React from 'react';
 import TableByCategory from './TableByCategory';
 
-function Roster({ team, updateName, deleteRobot, inRosters }) {
+function Roster({ team, updateName, deleteRobot, inRosters, updateNameinLeague }) {
   const { teamName, starters, subs } = team;
 
   return (
@@ -11,11 +11,15 @@ function Roster({ team, updateName, deleteRobot, inRosters }) {
         header="Starters" 
         robots={starters} 
         updateName={updateName} 
+        updateNameinLeague={updateNameinLeague}
+        teamName={teamName}
         deleteRobot={deleteRobot}
         inRosters={inRosters}/>
       <TableByCategory 
         header="Subs" 
         robots={subs} 
+        updateNameinLeague={updateNameinLeague}
+        teamName={teamName}
         updateName={updateName} 
         deleteRobot={deleteRobot}
         inRosters={inRosters}/>

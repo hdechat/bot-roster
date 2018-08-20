@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Robot ({ robot, updateName, deleteRobot, inRosters}) {
+function Robot (props) {
+  const { 
+    robot, updateName, deleteRobot, inRosters, 
+    updateNameinLeague, teamName } = props;
+
   const {
     id,
     firstName,
@@ -13,10 +17,14 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
   const changeName = (event) => {
     const prop = [event.target.classList[0]];
     const value = event.target.innerText;
+    const updatedRobot = {...robot, [prop]: value};
+
 
     if (event.which === 13 || event.which === 9) {
       event.preventDefault();
-      updateName({...robot, [prop]: value});
+      inRosters 
+        ? updateNameinLeague(updatedRobot, teamName)
+        : updateName(updatedRobot);
       document.getElementById(prop+id).innerText = robot[prop];
     }
   }
@@ -31,7 +39,7 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
       <td
         id={'firstName' + id}
         className="firstName" 
-        contentEditable={!inRosters}
+        contentEditable
         onBlur={changeName}
         onKeyPress={changeName}>
         {firstName}
@@ -39,7 +47,7 @@ function Robot ({ robot, updateName, deleteRobot, inRosters}) {
       <td
         id={'lastName' + id}
         className="lastName" 
-        contentEditable={!inRosters}
+        contentEditable
         onBlur={changeName}
         onKeyPress={changeName}>
       {lastName}
