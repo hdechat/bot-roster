@@ -10,16 +10,17 @@ class ViewRosters extends Component {
   
   render() {
     const teamsList = this.props.teams.map(({ teamName }, index) => 
-      <li key={teamName + index} onClick={()=>this.setState({ teamName })}><p>{ teamName }</p></li>
+      <option key={teamName + index}  value={teamName}><p>{ teamName }</p></option>
     );
     const team = this.props.teams.find(team => team.teamName === this.state.teamName)
 
     return (
       <div className="ViewRosters">
         <p>Click on the team name to view the roster!</p>
-        <ul>
+        <select onChange={event =>this.setState({ teamName: event.target.value })}>
+          <option value="">Select Team</option>
           {teamsList}
-        </ul>
+        </select>
         { !!this.state.teamName && <Roster team={ team } 
           updateNameinLeague={this.props.updateNameinLeague} inRosters={true} /> }
       </div>
