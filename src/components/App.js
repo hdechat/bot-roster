@@ -50,7 +50,7 @@ class App extends Component {
         </header>
         <NavLink className="nav" to='/create-roster'>Create Team Roster</NavLink>
         <NavLink className="nav" to='/rosters'>View Team Rosters</NavLink>
-        { !!this.state.error && <p>{this.state.error}</p> }
+        { !!this.state.error && <p className="app__error-message">{this.state.error}</p> }
         <Route exact path='/create-roster' render={() => {
           return <GenerateTeamRoster teams={this.state.teams} addTeamRoster={this.addTeamRoster} />
         }}/>

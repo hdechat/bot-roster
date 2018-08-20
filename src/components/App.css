@@ -41,6 +41,7 @@
   width: 90%;
 }
 
+.app__error-message,
 .generate__error-message {
   color: red;
   border: solid red;
