@@ -1,7 +1,8 @@
 import React from 'react';
 import GenerateTeamRoster from '../GenerateTeamRoster';
-import * as errors from '../../helpers/error-messages';
 import { shallow, mount  } from 'enzyme';
+import * as error from '../../helpers/error-messages';
+
 
 describe('GenerateTeamRoster', () => {
   let wrapper;
@@ -115,21 +116,21 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState({...mockState, teamName: ''});
       wrapper.instance().submitTeamRoster(mockEvent);
 
-      expect(wrapper.state('error')).toEqual(errors.missingName);
+      expect(wrapper.state('error')).toEqual(error.missingName);
     });
 
     it('sets correct error string if user submits roster that does not have 10 starters', () => {
       wrapper.setState({...mockState, starters: []});
       wrapper.instance().submitTeamRoster(mockEvent);
 
-      expect(wrapper.state('error')).toEqual(errors.badNumberOfStarters);
+      expect(wrapper.state('error')).toEqual(error.badNumberOfStarters);
     });
 
     it('sets correct error string if user submits roster that does not have 5 subs', () => {
       wrapper.setState({...mockState, subs: []});
       wrapper.instance().submitTeamRoster(mockEvent);
 
-      expect(wrapper.state('error')).toEqual(errors.badNumberOfSubs);
+      expect(wrapper.state('error')).toEqual(error.badNumberOfSubs);
     });
   });
 
@@ -229,7 +230,7 @@ describe('GenerateTeamRoster', () => {
     it('sets correct error string if totalAttrScore is greater than 100', () => {
       wrapper.instance().addRobotToTeam(mockRobotTooStrong);
 
-      expect (wrapper.state()).toEqual({...mockInitialState, error: errors.badScore})
+      expect (wrapper.state()).toEqual({...mockInitialState, error: error.badScore})
     });
 
     it('sets correct error string if totalAttrScore is a duplicate', () => {
@@ -262,7 +263,7 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState(mockState);
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
-      expect(wrapper.state('error')).toEqual(errors.duplicateScore);
+      expect(wrapper.state('error')).toEqual(error.duplicateScore);
     });
 
     it('sets correct error string if firstName is a duplicate in the team', () => {
@@ -295,7 +296,7 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState(mockState);
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
-      expect(wrapper.state('error')).toEqual(errors.duplicateFirstName);
+      expect(wrapper.state('error')).toEqual(error.duplicateFirstName);
     });
 
     it('sets correct error string if lastName is a duplicate in the team', () => {
@@ -328,7 +329,7 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState(mockState);
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
-      expect(wrapper.state('error')).toEqual(errors.duplicateLastName);
+      expect(wrapper.state('error')).toEqual(error.duplicateLastName);
     });
 
     it('sets correct error string if name is a duplicate in the league', () => {
@@ -345,7 +346,7 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState(mockInitialState);
       wrapper.instance().addRobotToTeam(mockRobotDupe);
 
-      expect(wrapper.state('error')).toEqual(errors.duplicateNameInLeague);
+      expect(wrapper.state('error')).toEqual(error.duplicateNameInLeague);
     });
 
     it('sets correct error string if starters category is full', () => {
@@ -354,7 +355,7 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState(mockFullStarters);
       wrapper.instance().addRobotToTeam(mockRobotStarter);
 
-      expect(wrapper.state('error')).toEqual(errors.maxPlayers);
+      expect(wrapper.state('error')).toEqual(error.maxPlayers);
     });
 
     it('sets correct error string if subs category is full', () => {
@@ -363,7 +364,7 @@ describe('GenerateTeamRoster', () => {
       wrapper.setState(mockFullStarters);
       wrapper.instance().addRobotToTeam(mockRobotSub);
 
-      expect(wrapper.state('error')).toEqual(errors.maxPlayers);
+      expect(wrapper.state('error')).toEqual(error.maxPlayers);
     });
   });
 
@@ -420,14 +421,14 @@ describe('GenerateTeamRoster', () => {
     it('sets correct error string if there is a duplicate firstName', () => {
       wrapper.setState(mockState);
       wrapper.instance().updateName({...mockRobotStarter, firstName: 'Rosie'});
-      expect(wrapper.state('error')).toEqual(errors.duplicateFirstName);
+      expect(wrapper.state('error')).toEqual(error.duplicateFirstName);
     });
 
     it('sets correct error string if there is a duplicate lastName', () => {
       wrapper.setState(mockState);
       wrapper.instance().updateName({...mockRobotStarter, lastName: 'Robot'});
 
-      expect(wrapper.state('error')).toEqual(errors.duplicateLastName);
+      expect(wrapper.state('error')).toEqual(error.duplicateLastName);
     });
   });
 
