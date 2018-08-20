@@ -10,7 +10,7 @@ class ViewRosters extends Component {
   
   render() {
     const teamsList = this.props.teams.map(({ teamName }, index) => 
-      <option key={teamName + index}  value={teamName}><p>{ teamName }</p></option>
+      <option key={teamName + index} value={teamName}>{ teamName }</option>
     );
     const team = this.props.teams.find(team => team.teamName === this.state.teamName)
 

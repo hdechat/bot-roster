@@ -20,7 +20,7 @@ describe('ViewRosters', () => {
   });
 
   it('should update state when user clicks on list item', () => {
-    wrapper.find('li').simulate('click')
+    wrapper.find('select').simulate('change', {target: {value: 'BuzzHerds'}})
 
     expect(wrapper.state()).toEqual(mockState);
   });
