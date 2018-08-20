@@ -105,7 +105,7 @@ export function checkForValidUpdate(robot, team, league) {
 export function validOrError(dupeFirst, dupeLast, dupeInLeague, id) {
   if (!dupeFirst && !dupeLast && !dupeInLeague) { 
     return 'valid';
-  } else if (dupeInLeague) {
+  } else if (dupeInLeague && dupeInLeague.id !== id) {
     return error.duplicateNameInLeague;
   } else if (!dupeFirst && dupeLast.id === id) {
     return 'valid';

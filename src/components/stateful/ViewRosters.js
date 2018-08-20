@@ -5,13 +5,14 @@ class ViewRosters extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {team: ''}
+    this.state = {teamName: ''}
   }
   
   render() {
-    const teamsList = this.props.teams.map((team, index) => 
-      <li key={team.teamName + index} onClick={()=>this.setState({ team })}><p>{team.teamName}</p></li>
+    const teamsList = this.props.teams.map(({ teamName }, index) => 
+      <li key={teamName + index} onClick={()=>this.setState({ teamName })}><p>{ teamName }</p></li>
     );
+    const team = this.props.teams.find(team => team.teamName === this.state.teamName)
 
     return (
       <div className="ViewRosters">
@@ -19,7 +20,8 @@ class ViewRosters extends Component {
         <ul>
           {teamsList}
         </ul>
-        {this.state.team ? <Roster team={this.state.team} inRosters={true}/> : ''}
+        { !!this.state.teamName && <Roster team={ team } 
+          updateNameinLeague={this.props.updateNameinLeague} inRosters={true} /> }
       </div>
     )
   }
