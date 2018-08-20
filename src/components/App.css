@@ -4,13 +4,14 @@
 
 .App-header {
   background-color: #bcc6cc;
-  height: 50px;
+  height: 80px;
   padding: 20px;
   color: #c12090;
 }
 
 .App-title {
   font-size: 1.5em;
+  color: #000;
 }
 
 .App-intro {
@@ -31,6 +32,13 @@
 .AddRobot {
   margin: 0 auto;
   width: 30%;
+}
+
+.TableByCategory {
+  border: solid;
+  min-height: 200px;
+  height: fit-content;
+  margin-bottom: 10px;
 }
 
 .generate__container {
@@ -66,10 +74,25 @@
 .nav {
   background: #fff;
   text-decoration: none;
-  border: solid;
+  border: solid #fff;
   border-radius: 3px;
   padding: 5px;
   margin: 5px;
+}
+
+.nav:hover {
+  text-decoration: underline;
+}
+
+.header__category {
+  background: #000;
+  color: white;
+  letter-spacing: 0.2em;
+  font-weight: 100;
+}
+
+.header__titles {
+  background: #bcc6cc;
 }
 
 select {
@@ -89,9 +112,7 @@ input {
 }
 
 table {
-  border: solid;
   width: 100%;
-  margin-bottom: 40px;
   padding-bottom: 5px;
 }
 

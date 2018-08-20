@@ -40,50 +40,50 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <table>
         <thead>
-          <tr>
-                    <th
-                              className="header__category"
-                              colSpan="7"
-                    >
-                              Starters
-                    </th>
-          </tr>
-</thead>,
+                <tr>
+                        <th
+                                className="header__category"
+                                colSpan="7"
+                        >
+                                Starters
+                        </th>
+                </tr>
+        </thead>
         <thead>
-          <tr
-                    className="header__titles"
-          >
-                    <th>
-                              ID
-                    </th>
-                    <th>
-                              FIRST NAME
-                    </th>
-                    <th>
-                              LAST NAME
-                    </th>
-                    <th>
-                              SPEED
-                    </th>
-                    <th>
-                              STRENGTH
-                    </th>
-                    <th>
-                              AGILITY
-                    </th>
-                    <th>
-                              TTL ATTRIBUTES SCORE
-                    </th>
-          </tr>
-</thead>,
+                <tr
+                        className="header__titles"
+                >
+                        <th>
+                                ID
+                        </th>
+                        <th>
+                                FIRST NAME
+                        </th>
+                        <th>
+                                LAST NAME
+                        </th>
+                        <th>
+                                SPEED
+                        </th>
+                        <th>
+                                STRENGTH
+                        </th>
+                        <th>
+                                AGILITY
+                        </th>
+                        <th>
+                                TTL ATTRIBUTES SCORE
+                        </th>
+                </tr>
+        </thead>
         <tbody>
-          <Robot
-                    deleteRobot={undefined}
-                    inRosters={undefined}
-                    robot={
-                              Object {
+                <Robot
+                        deleteRobot={undefined}
+                        inRosters={undefined}
+                        robot={
+                                Object {
                                         "agility": 40,
                                         "firstName": "Twikki",
                                         "id": "ABC123",
@@ -92,16 +92,16 @@ ShallowWrapper {
                                         "strength": 30,
                                         "totalAttrScore": 90,
                                       }
-                    }
-                    teamName={undefined}
-                    updateName={undefined}
-                    updateNameinLeague={undefined}
-          />
-          <Robot
-                    deleteRobot={undefined}
-                    inRosters={undefined}
-                    robot={
-                              Object {
+                        }
+                        teamName={undefined}
+                        updateName={undefined}
+                        updateNameinLeague={undefined}
+                />
+                <Robot
+                        deleteRobot={undefined}
+                        inRosters={undefined}
+                        robot={
+                                Object {
                                         "agility": 9,
                                         "firstName": "R2",
                                         "id": "ZXY987",
@@ -110,309 +110,17 @@ ShallowWrapper {
                                         "strength": 8,
                                         "totalAttrScore": 22,
                                       }
-                    }
-                    teamName={undefined}
-                    updateName={undefined}
-                    updateNameinLeague={undefined}
-          />
-</tbody>,
-      ],
+                        }
+                        teamName={undefined}
+                        updateName={undefined}
+                        updateNameinLeague={undefined}
+                />
+        </tbody>
+</table>,
+      "className": "TableByCategory",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <tr>
-            <th
-                        className="header__category"
-                        colSpan="7"
-            >
-                        Starters
-            </th>
-</tr>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <th
-              className="header__category"
-              colSpan="7"
->
-              Starters
-</th>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Starters",
-              "className": "header__category",
-              "colSpan": "7",
-            },
-            "ref": null,
-            "rendered": "Starters",
-            "type": "th",
-          },
-          "type": "tr",
-        },
-        "type": "thead",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <tr
-            className="header__titles"
->
-            <th>
-                        ID
-            </th>
-            <th>
-                        FIRST NAME
-            </th>
-            <th>
-                        LAST NAME
-            </th>
-            <th>
-                        SPEED
-            </th>
-            <th>
-                        STRENGTH
-            </th>
-            <th>
-                        AGILITY
-            </th>
-            <th>
-                        TTL ATTRIBUTES SCORE
-            </th>
-</tr>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <th>
-                ID
-</th>,
-              <th>
-                FIRST NAME
-</th>,
-              <th>
-                LAST NAME
-</th>,
-              <th>
-                SPEED
-</th>,
-              <th>
-                STRENGTH
-</th>,
-              <th>
-                AGILITY
-</th>,
-              <th>
-                TTL ATTRIBUTES SCORE
-</th>,
-            ],
-            "className": "header__titles",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "ID",
-              },
-              "ref": null,
-              "rendered": "ID",
-              "type": "th",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "FIRST NAME",
-              },
-              "ref": null,
-              "rendered": "FIRST NAME",
-              "type": "th",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "LAST NAME",
-              },
-              "ref": null,
-              "rendered": "LAST NAME",
-              "type": "th",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "SPEED",
-              },
-              "ref": null,
-              "rendered": "SPEED",
-              "type": "th",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "STRENGTH",
-              },
-              "ref": null,
-              "rendered": "STRENGTH",
-              "type": "th",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "AGILITY",
-              },
-              "ref": null,
-              "rendered": "AGILITY",
-              "type": "th",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "TTL ATTRIBUTES SCORE",
-              },
-              "ref": null,
-              "rendered": "TTL ATTRIBUTES SCORE",
-              "type": "th",
-            },
-          ],
-          "type": "tr",
-        },
-        "type": "thead",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <Robot
-              deleteRobot={undefined}
-              inRosters={undefined}
-              robot={
-                            Object {
-                                          "agility": 40,
-                                          "firstName": "Twikki",
-                                          "id": "ABC123",
-                                          "lastName": "Rogers",
-                                          "speed": 20,
-                                          "strength": 30,
-                                          "totalAttrScore": 90,
-                                        }
-              }
-              teamName={undefined}
-              updateName={undefined}
-              updateNameinLeague={undefined}
-/>,
-            <Robot
-              deleteRobot={undefined}
-              inRosters={undefined}
-              robot={
-                            Object {
-                                          "agility": 9,
-                                          "firstName": "R2",
-                                          "id": "ZXY987",
-                                          "lastName": "D2",
-                                          "speed": 5,
-                                          "strength": 8,
-                                          "totalAttrScore": 22,
-                                        }
-              }
-              teamName={undefined}
-              updateName={undefined}
-              updateNameinLeague={undefined}
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "TwikkiRogers90",
-            "nodeType": "function",
-            "props": Object {
-              "deleteRobot": undefined,
-              "inRosters": undefined,
-              "robot": Object {
-                "agility": 40,
-                "firstName": "Twikki",
-                "id": "ABC123",
-                "lastName": "Rogers",
-                "speed": 20,
-                "strength": 30,
-                "totalAttrScore": 90,
-              },
-              "teamName": undefined,
-              "updateName": undefined,
-              "updateNameinLeague": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "R2D222",
-            "nodeType": "function",
-            "props": Object {
-              "deleteRobot": undefined,
-              "inRosters": undefined,
-              "robot": Object {
-                "agility": 9,
-                "firstName": "R2",
-                "id": "ZXY987",
-                "lastName": "D2",
-                "speed": 5,
-                "strength": 8,
-                "totalAttrScore": 22,
-              },
-              "teamName": undefined,
-              "updateName": undefined,
-              "updateNameinLeague": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "tbody",
-      },
-    ],
-    "type": "table",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -787,6 +495,472 @@ ShallowWrapper {
         },
       ],
       "type": "table",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <table>
+          <thead>
+                    <tr>
+                              <th
+                                        className="header__category"
+                                        colSpan="7"
+                              >
+                                        Starters
+                              </th>
+                    </tr>
+          </thead>
+          <thead>
+                    <tr
+                              className="header__titles"
+                    >
+                              <th>
+                                        ID
+                              </th>
+                              <th>
+                                        FIRST NAME
+                              </th>
+                              <th>
+                                        LAST NAME
+                              </th>
+                              <th>
+                                        SPEED
+                              </th>
+                              <th>
+                                        STRENGTH
+                              </th>
+                              <th>
+                                        AGILITY
+                              </th>
+                              <th>
+                                        TTL ATTRIBUTES SCORE
+                              </th>
+                    </tr>
+          </thead>
+          <tbody>
+                    <Robot
+                              deleteRobot={undefined}
+                              inRosters={undefined}
+                              robot={
+                                        Object {
+                                                  "agility": 40,
+                                                  "firstName": "Twikki",
+                                                  "id": "ABC123",
+                                                  "lastName": "Rogers",
+                                                  "speed": 20,
+                                                  "strength": 30,
+                                                  "totalAttrScore": 90,
+                                                }
+                              }
+                              teamName={undefined}
+                              updateName={undefined}
+                              updateNameinLeague={undefined}
+                    />
+                    <Robot
+                              deleteRobot={undefined}
+                              inRosters={undefined}
+                              robot={
+                                        Object {
+                                                  "agility": 9,
+                                                  "firstName": "R2",
+                                                  "id": "ZXY987",
+                                                  "lastName": "D2",
+                                                  "speed": 5,
+                                                  "strength": 8,
+                                                  "totalAttrScore": 22,
+                                                }
+                              }
+                              teamName={undefined}
+                              updateName={undefined}
+                              updateNameinLeague={undefined}
+                    />
+          </tbody>
+</table>,
+        "className": "TableByCategory",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <thead>
+              <tr>
+                            <th
+                                          className="header__category"
+                                          colSpan="7"
+                            >
+                                          Starters
+                            </th>
+              </tr>
+</thead>,
+            <thead>
+              <tr
+                            className="header__titles"
+              >
+                            <th>
+                                          ID
+                            </th>
+                            <th>
+                                          FIRST NAME
+                            </th>
+                            <th>
+                                          LAST NAME
+                            </th>
+                            <th>
+                                          SPEED
+                            </th>
+                            <th>
+                                          STRENGTH
+                            </th>
+                            <th>
+                                          AGILITY
+                            </th>
+                            <th>
+                                          TTL ATTRIBUTES SCORE
+                            </th>
+              </tr>
+</thead>,
+            <tbody>
+              <Robot
+                            deleteRobot={undefined}
+                            inRosters={undefined}
+                            robot={
+                                          Object {
+                                                        "agility": 40,
+                                                        "firstName": "Twikki",
+                                                        "id": "ABC123",
+                                                        "lastName": "Rogers",
+                                                        "speed": 20,
+                                                        "strength": 30,
+                                                        "totalAttrScore": 90,
+                                                      }
+                            }
+                            teamName={undefined}
+                            updateName={undefined}
+                            updateNameinLeague={undefined}
+              />
+              <Robot
+                            deleteRobot={undefined}
+                            inRosters={undefined}
+                            robot={
+                                          Object {
+                                                        "agility": 9,
+                                                        "firstName": "R2",
+                                                        "id": "ZXY987",
+                                                        "lastName": "D2",
+                                                        "speed": 5,
+                                                        "strength": 8,
+                                                        "totalAttrScore": 22,
+                                                      }
+                            }
+                            teamName={undefined}
+                            updateName={undefined}
+                            updateNameinLeague={undefined}
+              />
+</tbody>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <tr>
+                <th
+                                className="header__category"
+                                colSpan="7"
+                >
+                                Starters
+                </th>
+</tr>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <th
+                  className="header__category"
+                  colSpan="7"
+>
+                  Starters
+</th>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Starters",
+                  "className": "header__category",
+                  "colSpan": "7",
+                },
+                "ref": null,
+                "rendered": "Starters",
+                "type": "th",
+              },
+              "type": "tr",
+            },
+            "type": "thead",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <tr
+                className="header__titles"
+>
+                <th>
+                                ID
+                </th>
+                <th>
+                                FIRST NAME
+                </th>
+                <th>
+                                LAST NAME
+                </th>
+                <th>
+                                SPEED
+                </th>
+                <th>
+                                STRENGTH
+                </th>
+                <th>
+                                AGILITY
+                </th>
+                <th>
+                                TTL ATTRIBUTES SCORE
+                </th>
+</tr>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <th>
+                    ID
+</th>,
+                  <th>
+                    FIRST NAME
+</th>,
+                  <th>
+                    LAST NAME
+</th>,
+                  <th>
+                    SPEED
+</th>,
+                  <th>
+                    STRENGTH
+</th>,
+                  <th>
+                    AGILITY
+</th>,
+                  <th>
+                    TTL ATTRIBUTES SCORE
+</th>,
+                ],
+                "className": "header__titles",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ID",
+                  },
+                  "ref": null,
+                  "rendered": "ID",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "FIRST NAME",
+                  },
+                  "ref": null,
+                  "rendered": "FIRST NAME",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "LAST NAME",
+                  },
+                  "ref": null,
+                  "rendered": "LAST NAME",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "SPEED",
+                  },
+                  "ref": null,
+                  "rendered": "SPEED",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "STRENGTH",
+                  },
+                  "ref": null,
+                  "rendered": "STRENGTH",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "AGILITY",
+                  },
+                  "ref": null,
+                  "rendered": "AGILITY",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "TTL ATTRIBUTES SCORE",
+                  },
+                  "ref": null,
+                  "rendered": "TTL ATTRIBUTES SCORE",
+                  "type": "th",
+                },
+              ],
+              "type": "tr",
+            },
+            "type": "thead",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Robot
+                  deleteRobot={undefined}
+                  inRosters={undefined}
+                  robot={
+                                    Object {
+                                                      "agility": 40,
+                                                      "firstName": "Twikki",
+                                                      "id": "ABC123",
+                                                      "lastName": "Rogers",
+                                                      "speed": 20,
+                                                      "strength": 30,
+                                                      "totalAttrScore": 90,
+                                                    }
+                  }
+                  teamName={undefined}
+                  updateName={undefined}
+                  updateNameinLeague={undefined}
+/>,
+                <Robot
+                  deleteRobot={undefined}
+                  inRosters={undefined}
+                  robot={
+                                    Object {
+                                                      "agility": 9,
+                                                      "firstName": "R2",
+                                                      "id": "ZXY987",
+                                                      "lastName": "D2",
+                                                      "speed": 5,
+                                                      "strength": 8,
+                                                      "totalAttrScore": 22,
+                                                    }
+                  }
+                  teamName={undefined}
+                  updateName={undefined}
+                  updateNameinLeague={undefined}
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "TwikkiRogers90",
+                "nodeType": "function",
+                "props": Object {
+                  "deleteRobot": undefined,
+                  "inRosters": undefined,
+                  "robot": Object {
+                    "agility": 40,
+                    "firstName": "Twikki",
+                    "id": "ABC123",
+                    "lastName": "Rogers",
+                    "speed": 20,
+                    "strength": 30,
+                    "totalAttrScore": 90,
+                  },
+                  "teamName": undefined,
+                  "updateName": undefined,
+                  "updateNameinLeague": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "R2D222",
+                "nodeType": "function",
+                "props": Object {
+                  "deleteRobot": undefined,
+                  "inRosters": undefined,
+                  "robot": Object {
+                    "agility": 9,
+                    "firstName": "R2",
+                    "id": "ZXY987",
+                    "lastName": "D2",
+                    "speed": 5,
+                    "strength": 8,
+                    "totalAttrScore": 22,
+                  },
+                  "teamName": undefined,
+                  "updateName": undefined,
+                  "updateNameinLeague": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "tbody",
+          },
+        ],
+        "type": "table",
+      },
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -25,23 +25,23 @@ ShallowWrapper {
           >
                     Roster Bots
           </h1>
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="nav"
+                    to="/create-roster"
+          >
+                    Create Team Roster
+          </NavLink>
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="nav"
+                    to="/rosters"
+          >
+                    View Team Rosters
+          </NavLink>
 </header>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav"
-          to="/create-roster"
->
-          Create Team Roster
-</NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav"
-          to="/rosters"
->
-          View Team Rosters
-</NavLink>,
         false,
         <Route
           exact={true}
@@ -63,57 +63,77 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <h1
-            className="App-title"
+          "children": Array [
+            <h1
+              className="App-title"
 >
-            Roster Bots
+              Roster Bots
 </h1>,
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="nav"
+              to="/create-roster"
+>
+              Create Team Roster
+</NavLink>,
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="nav"
+              to="/rosters"
+>
+              View Team Rosters
+</NavLink>,
+          ],
           "className": "App-header",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Roster Bots",
-            "className": "App-title",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Roster Bots",
+              "className": "App-title",
+            },
+            "ref": null,
+            "rendered": "Roster Bots",
+            "type": "h1",
           },
-          "ref": null,
-          "rendered": "Roster Bots",
-          "type": "h1",
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Create Team Roster",
+              "className": "nav",
+              "to": "/create-roster",
+            },
+            "ref": null,
+            "rendered": "Create Team Roster",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "View Team Rosters",
+              "className": "nav",
+              "to": "/rosters",
+            },
+            "ref": null,
+            "rendered": "View Team Rosters",
+            "type": [Function],
+          },
+        ],
         "type": "header",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "Create Team Roster",
-          "className": "nav",
-          "to": "/create-roster",
-        },
-        "ref": null,
-        "rendered": "Create Team Roster",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "View Team Rosters",
-          "className": "nav",
-          "to": "/rosters",
-        },
-        "ref": null,
-        "rendered": "View Team Rosters",
-        "type": [Function],
       },
       false,
       Object {
@@ -160,23 +180,23 @@ ShallowWrapper {
             >
                         Roster Bots
             </h1>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="nav"
+                        to="/create-roster"
+            >
+                        Create Team Roster
+            </NavLink>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="nav"
+                        to="/rosters"
+            >
+                        View Team Rosters
+            </NavLink>
 </header>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav"
-            to="/create-roster"
->
-            Create Team Roster
-</NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav"
-            to="/rosters"
->
-            View Team Rosters
-</NavLink>,
           false,
           <Route
             exact={true}
@@ -198,57 +218,77 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <h1
-              className="App-title"
+            "children": Array [
+              <h1
+                className="App-title"
 >
-              Roster Bots
+                Roster Bots
 </h1>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="nav"
+                to="/create-roster"
+>
+                Create Team Roster
+</NavLink>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="nav"
+                to="/rosters"
+>
+                View Team Rosters
+</NavLink>,
+            ],
             "className": "App-header",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Roster Bots",
-              "className": "App-title",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Roster Bots",
+                "className": "App-title",
+              },
+              "ref": null,
+              "rendered": "Roster Bots",
+              "type": "h1",
             },
-            "ref": null,
-            "rendered": "Roster Bots",
-            "type": "h1",
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Create Team Roster",
+                "className": "nav",
+                "to": "/create-roster",
+              },
+              "ref": null,
+              "rendered": "Create Team Roster",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "View Team Rosters",
+                "className": "nav",
+                "to": "/rosters",
+              },
+              "ref": null,
+              "rendered": "View Team Rosters",
+              "type": [Function],
+            },
+          ],
           "type": "header",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "Create Team Roster",
-            "className": "nav",
-            "to": "/create-roster",
-          },
-          "ref": null,
-          "rendered": "Create Team Roster",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "View Team Rosters",
-            "className": "nav",
-            "to": "/rosters",
-          },
-          "ref": null,
-          "rendered": "View Team Rosters",
-          "type": [Function],
         },
         false,
         Object {
