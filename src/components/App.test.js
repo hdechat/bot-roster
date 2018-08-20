@@ -32,10 +32,6 @@ describe('App', () => {
   describe('UPDATE_NAME_IN_LEAGUE', () => {
     beforeEach(() => {
       wrapper.setState({ teams: [sampleTeam], error: ''});
-
-      
-
-      
     });
 
     it('updates robot name if there are no duplicates', () => {
