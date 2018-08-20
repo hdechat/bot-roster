@@ -341,7 +341,7 @@ describe('HELPERS', () => {
     });
 
     it('returns correct error string if there is a dupe name in the league', () => {
-      const actual = helper.validOrError(undefined, undefined, robot, 'ABC123', );
+      const actual = helper.validOrError(undefined, undefined, robotSub, 'ABC123', );
       const expected = error.duplicateNameInLeague;
 
       expect(actual).toEqual(expected);

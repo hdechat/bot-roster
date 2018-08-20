@@ -42,6 +42,7 @@ ShallowWrapper {
 >
           View Team Rosters
 </NavLink>,
+        false,
         <Route
           exact={true}
           path="/create-roster"
@@ -114,6 +115,7 @@ ShallowWrapper {
         "rendered": "View Team Rosters",
         "type": [Function],
       },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -175,6 +177,7 @@ ShallowWrapper {
 >
             View Team Rosters
 </NavLink>,
+          false,
           <Route
             exact={true}
             path="/create-roster"
@@ -247,6 +250,7 @@ ShallowWrapper {
           "rendered": "View Team Rosters",
           "type": [Function],
         },
+        false,
         Object {
           "instance": null,
           "key": undefined,
